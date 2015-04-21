@@ -52,7 +52,14 @@
 }
 
 .inner {
-	margin-right: auto;
+	font-family: sans-serif;
+	color: white;
+	font-size: xx-large;
+	text-shadow: -1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;
+
 }
 
 h1{
