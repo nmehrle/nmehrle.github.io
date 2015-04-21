@@ -52,14 +52,22 @@
 }
 
 .inner {
+	width: 150px;
 	font-family: sans-serif;
 	color: white;
 	font-size: xx-large;
-	text-shadow: -1px -1px 0 #000,
-		1px -1px 0 #000,
-		-1px 1px 0 #000,
-		1px 1px 0 #000;
+	text-shadow: -1px -1px 0 #333,
+		1px -1px 0 #333,
+		-1px 1px 0 #333,
+		1px 1px 0 #333;
+}
 
+.left {
+	margin-right: auto;
+}
+
+.right{
+	margin-left: auto;
 }
 
 h1{
@@ -68,7 +76,6 @@ h1{
 
 #work { 
 	background-color: yellow;
-	vertical-align: middle;
 }
 
 #school {
