@@ -1,0 +1,80 @@
+#slideMenu {
+	position: fixed;
+	width: 250px;
+	height: 100%;
+	background-color: blue;
+	z-index: 20;
+	left: -250px;
+}
+
+#content {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+}
+
+#innerContent {
+	width: 90%;
+	margin: 0px auto;
+	background-color: #ccc;
+}
+
+#menuButton {
+	width: 25px;
+	height: 20px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menuBar {
+	width: 25px;
+	height: 4px;
+	margin-bottom: 4px;
+	background-color: #222;
+	border-radius: 10px;
+}
+
+.line {
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+.outer {
+	display: table;
+}
+	
+
+.middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.inner {
+	margin-right: auto;
+}
+
+h1{
+	display: inline-block;
+}
+
+#work { 
+	background-color: yellow;
+	vertical-align: middle;
+}
+
+#school {
+	background-color: pink;
+}
+
+#play {
+	background-color: green;
+}
+
+.space {
+}
+
+#bonusSpace {
+	height: 25px;
+}
