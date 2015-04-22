@@ -52,7 +52,7 @@
 }
 
 .inner {
-	width: 150px;
+	display: inline-block;
 	font-family: sans-serif;
 	color: white;
 	font-size: xx-large;
@@ -62,12 +62,20 @@
 		1px 1px 0 #333;
 }
 
-.left {
-	margin-right: auto;
+.midLeft {
+	text-align: left;
 }
 
-.right{
-	margin-left: auto;
+.midRight{
+	text-align: right;
+}
+
+.inLeft {
+	margin-left: 40px;
+}
+
+.inRight {
+	margin-right: 40px;
 }
 
 h1{
@@ -92,3 +100,4 @@ h1{
 #bonusSpace {
 	height: 25px;
 }
+
