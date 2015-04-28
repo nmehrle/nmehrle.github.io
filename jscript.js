@@ -13,4 +13,18 @@ $(document).ready(function() {
 			on=true;
 		}
 	});
+
+	$("#work").hover(function() {
+			$("#header").animate({height:"200px"},{duration:200,queue:false});
+			$("#work").animate({height:"260px"},{duration:200,queue:false});
+			$("#school").animate({height:"200px"},{duration:200,queue:false});
+			$("#work").animate({top:"200px"},{duration:200,queue:false});
+			$("#school").animate({top:"460px"},{duration:200,queue:false});
+		},function() {
+			$("#header").animate({height:"220px"},{duration:200,queue:false});
+			$("#work").animate({height:"220px"},{duration:200,queue:false});
+			$("#school").animate({height:"220px"},{duration:200,queue:false});
+			$("#work").animate({top:"220px"},{duration:200,queue:false});
+			$("#school").animate({top:"440px"},{duration:200,queue:false});
+	});
 });

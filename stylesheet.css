@@ -38,8 +38,9 @@
 
 .line {
 	width: 100%;
-	height: 220px;
 	text-align: center;
+	position: absolute;
+	height: 220px;
 }
 
 .outer {
@@ -57,22 +58,26 @@
 	color: white;
 }
 
-h1{
+#header{
 	display: inline-block;
+	top: 0px;
 }
 
 #work { 
-	background-color: #3BA4DA;
+	background-color: #48B7DA;
+	top: 220px;
 }
 #innerWork {
 	color: #FFF;
 }
 
 #school {
-	background-color: #A4F66C;
+	background-color: #80F66C;
+	top: 440px;
 }
 
 #play {
-	background-color: #F18B37;
+	background-color: #F18934;
+	top: 660px;
 }
 
