@@ -11,6 +11,7 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
+	overflow: scroll;
 	left: 0px;
 	background-color: #F2EDE0;
 	font-family: sans-serif;
@@ -40,7 +41,7 @@
 	width: 100%;
 	text-align: center;
 	position: absolute;
-	height: 220px;
+	height: 190px;
 }
 
 .outer {
@@ -65,7 +66,7 @@
 
 #work { 
 	background-color: #48B7DA;
-	top: 220px;
+	top: 190px;
 }
 #innerWork {
 	color: #FFF;
@@ -73,11 +74,11 @@
 
 #school {
 	background-color: #80F66C;
-	top: 440px;
+	top: 380px;
 }
 
 #play {
 	background-color: #F18934;
-	top: 660px;
+	top: 570px;
 }
 

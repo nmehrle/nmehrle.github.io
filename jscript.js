@@ -14,17 +14,23 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#work").hover(function() {
-			$("#header").animate({height:"200px"},{duration:200,queue:false});
-			$("#work").animate({height:"260px"},{duration:200,queue:false});
-			$("#school").animate({height:"200px"},{duration:200,queue:false});
-			$("#work").animate({top:"200px"},{duration:200,queue:false});
-			$("#school").animate({top:"460px"},{duration:200,queue:false});
-		},function() {
-			$("#header").animate({height:"220px"},{duration:200,queue:false});
-			$("#work").animate({height:"220px"},{duration:200,queue:false});
-			$("#school").animate({height:"220px"},{duration:200,queue:false});
-			$("#work").animate({top:"220px"},{duration:200,queue:false});
-			$("#school").animate({top:"440px"},{duration:200,queue:false});
+	var lines = ["#header","#work","#school","#play"];
+
+	jQuery.each(lines, function(i,val) {
+		if(i!=0) {
+			$(val).hover(function() {
+				$(lines[i-1]).animate({height:"175px"},{duration:200,queue:false});
+				$(val).animate({height:"220px"},{duration:200,queue:false});
+				$(val).animate({top:(175*i+15*(i-1))+"px"},{duration:200,queue:false});
+				$(lines[i+1]).animate({height:"175px"},{duration:200,queue:false});
+				$(lines[i+1]).animate({top:(190*(i+1)+15)+"px"},{duration:200,queue:false});
+			},function() {
+				$(lines[i-1]).animate({height:"190px"},{duration:200,queue:false});
+				$(val).animate({height:"190px"},{duration:200,queue:false});
+				$(val).animate({top:(190*i)+"px"},{duration:200,queue:false});
+				$(lines[i+1]).animate({height:"190px"},{duration:200,queue:false});
+				$(lines[i+1]).animate({top:(190*(i+1))+"px"},{duration:200,queue:false});
+			});
+		}
 	});
 });
