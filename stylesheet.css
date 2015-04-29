@@ -69,8 +69,34 @@
 	font-size: 120%;
 }
 
-#phot { 
+#photContainer {
 	height: 200px;
+	width: 200px;
+	margin: 0px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.ap {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#phot {
+	min-height: 200px;
+	max-height: 200px;
+	min-width: 200px;
+	max-width: 200px;
+ }
+
+#about {
+	height: 201px;
+	width: 201px;
+	border-radius: 50%;
+	background-color: #E4F6F8;
+	opacity: 0.8;
+	z-index: 10;
 }
 
 #topSpace {
@@ -78,18 +104,18 @@
 }
 
 #work { 
-	background-color: #00B9DE;
+	background-color: #3BD4DA;
 }
 
 #innerWork {
 }
 
 #school {
-	background-color: #00FF6E;
+	background-color: #80F66C;
 }
 
 #play {
-	background-color: #FF8300;
+	background-color: #F1852D;
 }
 
 
