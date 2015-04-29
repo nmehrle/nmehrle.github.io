@@ -94,6 +94,8 @@
 	height: 201px;
 	width: 201px;
 	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	background-color: #E4F6F8;
 	opacity: 0.8;
 	z-index: 10;
