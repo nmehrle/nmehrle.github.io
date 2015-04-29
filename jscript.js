@@ -17,11 +17,13 @@ $(document).ready(function() {
 	var lines = ["#header","#work","#school","#play"];
 	var subHeight = 135;
 	var mainHeight = 300;
-	var heights = [mainHeight,subHeight,subHeight,subHeight];
-	var tops = [0,mainHeight,mainHeight+subHeight,mainHeight+2*subHeight];
+	var overlap =20;
+	var heights = [mainHeight,subHeight+overlap,subHeight,subHeight+overlap];
+	var tops = [0,mainHeight,mainHeight+subHeight,mainHeight+2*subHeight-overlap];
 	var delta = 15;
-	animationTime=150;
+	animationTime=200;
 
+	$('.textSpace').height(overlap+"px");
 
 	$.each(lines, function(i,val) {
 		$(val).height(heights[i]+"px");
@@ -45,5 +47,13 @@ $(document).ready(function() {
 				}
 			});
 		}
+	});
+
+	$("#aboutTxt").hover(function() {
+		$('#about').animate({opacity:0.8},{duration:animationTime,queue:false});
+		$(this).animate({opacity:1},{duration:animationTime,queue:false});
+	},function(){
+		$(this).animate({opacity:0},{duration:animationTime,queue:false});
+		$('#about').animate({opacity:0},{duration:animationTime,queue:false});
 	});
 });

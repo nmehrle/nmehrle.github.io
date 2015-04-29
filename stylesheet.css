@@ -72,6 +72,9 @@
 #photContainer {
 	height: 200px;
 	width: 200px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
 	margin: 0px auto;
 	position: relative;
 	overflow: hidden;
@@ -97,8 +100,25 @@
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	background-color: #E4F6F8;
-	opacity: 0.8;
+	opacity: 0;
 	z-index: 10;
+	display: table;
+}
+
+#aboutTxt {
+	height: 201px;
+	width: 201px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	z-index: 20;
+	display: table;
+	opacity: 0;
+}
+
+#aboutMid {
+	opacity: 1;
+	font-size: 70%;
 }
 
 #topSpace {
@@ -109,11 +129,9 @@
 	background-color: #3BD4DA;
 }
 
-#innerWork {
-}
-
 #school {
 	background-color: #80F66C;
+	z-index: 10;
 }
 
 #play {
