@@ -34,7 +34,8 @@
 	height: 4px;
 	margin-bottom: 4px;
 	background-color: #333;
-	border-radius: 10px;
+	border-radius
+	: 10px;
 }
 
 .line {
@@ -68,6 +69,14 @@
 	font-size: 120%;
 }
 
+#phot { 
+	height: 200px;
+}
+
+#topSpace {
+	height: 20px;
+}
+
 #work { 
 	background-color: #00B9DE;
 }
@@ -83,7 +92,4 @@
 	background-color: #FF8300;
 }
 
-#phot { 
-	display: none;
-}
 
