@@ -77,13 +77,21 @@
 	-moz-border-radius: 50%;
 	margin: 0px auto;
 	position: relative;
-	overflow: hidden;
 }
 
 .ap {
 	position: absolute;
 	top: 0;
 	left: 0;
+	overflow: hidden;
+}
+.circ {
+	height: 201px;
+	width: 201px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	opacity: 0;
 }
 
 #phot {
@@ -92,33 +100,18 @@
 	min-width: 200px;
 	max-width: 200px;
  }
+ #trigger {
+ 	z-index: 3;
+ }
 
-#about {
-	height: 201px;
-	width: 201px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
+#shield {
 	background-color: #E4F6F8;
-	opacity: 0;
-	z-index: 10;
+	z-index: 1;
 	display: table;
 }
-
-#aboutTxt {
-	height: 201px;
-	width: 201px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	z-index: 20;
+#about {
+	z-index: 2;
 	display: table;
-	opacity: 0;
-}
-
-#aboutMid {
-	opacity: 1;
-	font-size: 70%;
 }
 
 #topSpace {
@@ -131,11 +124,9 @@
 
 #school {
 	background-color: #80F66C;
-	z-index: 10;
+	z-index: 1;
 }
 
 #play {
 	background-color: #F1852D;
 }
-
-

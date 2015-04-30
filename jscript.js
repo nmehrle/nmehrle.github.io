@@ -49,11 +49,11 @@ $(document).ready(function() {
 		}
 	});
 
-	$("#aboutTxt").hover(function() {
-		$('#about').animate({opacity:0.8},{duration:animationTime,queue:false});
-		$(this).animate({opacity:1},{duration:animationTime,queue:false});
+	$("#trigger").hover(function() {
+		$('#shield').animate({opacity:0.8},{duration:animationTime,queue:false});
+		$('#about').animate({opacity:1},{duration:animationTime,queue:false});
 	},function(){
-		$(this).animate({opacity:0},{duration:animationTime,queue:false});
 		$('#about').animate({opacity:0},{duration:animationTime,queue:false});
+		$('#shield').animate({opacity:0},{duration:animationTime,queue:false});
 	});
 });
