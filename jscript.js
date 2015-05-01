@@ -1,76 +1,23 @@
 var on = false;
 
 $(document).ready(function() {
-	$("#menuButton").click(function(){
-		if(on) {
-			$('#slideMenu').animate({left:"-250px"});
-			$('#content').animate({left:"0px"});
-			on=false;
-		}
-		else {
-			$('#slideMenu').animate({left:"0px"});
-			$('#content').animate({left:"250px"});
-			on=true;
-		}
-	});
-
-	var lines = ["#header","#work","#school","#play"];
-	var subHeight = 135;
-	var mainHeight = 300;
-	var overlap =0;
-	var heights = [mainHeight,subHeight+overlap,subHeight,subHeight+overlap];
-	var tops = [0,mainHeight,mainHeight+subHeight,mainHeight+2*subHeight-overlap];
-	var delta = 15;
-	var zmax =1;
+	var bars = ["#work","#school","#play"];
+	var height = 135;
+	var headHeight=300;
+	var tops = [headHeight,headHeight+height,headHeight+2*height];
 	animationTime=200;
 
-	$('.textSpace').height(overlap+"px");
+	$("#header").height(headHeight+"px");
 
-	$.each(lines, function(i,val) {
-		$(val).height(heights[i]+"px");
-		$(val).css("top",tops[i]+"px");
-		if(i!=0) {
-			$(val).hover(function() {
-				$(val).css("z-index",zmax);
-				zmax++;
-				console.log(zmax);
-				//$(lines[i-1]).animate({height:heights[i-1]-delta+"px"},{duration:animationTime,queue:false});
-				$(val).animate({height:heights[i]+2*delta+"px"},{duration:animationTime,queue:false});
-				$(val).animate({top:(tops[i]-delta)+"px"},{duration:animationTime,queue:false});
-				
-				$(val).animate({width:"105%"},{duration:animationTime,queue:false});
-				$(val).animate({left:"-2.5%"},{duration:animationTime,queue:false});
-
-				if(i!=3) {
-					//$(lines[i+1]).animate({height:heights[i+1]-delta+"px"},{duration:animationTime,queue:false});
-					//$(lines[i+1]).animate({top:(tops[i+1]+delta)+"px"},{duration:animationTime,queue:false});
-				}
-			},function() {
-				//$(lines[i-1]).animate({height:heights[i-1]+"px"},{duration:animationTime,queue:false});
-				$(val).animate({height:heights[i]+"px"},{duration:animationTime,queue:false});
-				$(val).animate({top:tops[i]+"px"},{duration:animationTime,queue:false});
-
-				$(val).animate({width:"100%"},{duration:animationTime,queue:false});
-				$(val).animate({left:"0"},{duration:animationTime,queue:false});
-
-				if(i!=3) {
-					//$(lines[i+1]).animate({height:heights[i+1]+"px"},{duration:animationTime,queue:false});
-					//$(lines[i+1]).animate({top:tops[i+1]+"px"},{duration:animationTime,queue:false});
-				}
-				setTimeout(function() {
-					$(val).css("z-index",0);
-					zmax--;
-					console.log(zmax);
-				},animationTime);
-			});
-		}
-	});
-
-	$("#trigger").hover(function() {
-		$('#shield').animate({opacity:0.8},{duration:animationTime,queue:false});
-		$('#about').animate({opacity:1},{duration:animationTime,queue:false});
-	},function(){
-		$('#about').animate({opacity:0},{duration:animationTime,queue:false});
-		$('#shield').animate({opacity:0},{duration:animationTime,queue:false});
+	$.each(bars, function(i,val) {
+		$(val).height(height+"px");
+		$(val).css("top",tops[i]+15+"px");
+		$(val).hover(function() {
+			$(val).velocity({width:"104%"},{duration:animationTime,queue:false});
+			$(val).velocity({left:"-2%"},{duration:animationTime,queue:false});
+		},function() {
+			$(val).velocity({width:"100%"},{duration:animationTime,queue:false});
+			$(val).velocity({left:"0"},{duration:animationTime,queue:false});
+		});
 	});
 });

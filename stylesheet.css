@@ -1,12 +1,3 @@
-#slideMenu {
-	position: fixed;
-	width: 250px;
-	height: 100%;
-	background-color: blue;
-	z-index: 20;
-	left: -250px;
-}
-
 #content {
 	position: absolute;
 	width: 100%;
@@ -25,25 +16,54 @@
 #centeredContent {
 	margin: 0 auto;
 	width: 95%;
-	max-width: 980px;
+	max-width: 780px;
 	height: 100%;
 	position: relative;
 }
 
-#menuButton {
-	width: 25px;
-	height: 20px;
-	overflow: hidden;
-	cursor: pointer;
+#menuBar{
+	position: absolute;
+	left: 70%;
+	width: 100%;
+	height: 30px;
+	font-size: 16px;
+	text-shadow: none;
+	background-color:#333;
 }
 
-.menuBar {
-	width: 25px;
-	height: 4px;
-	margin-bottom: 4px;
-	background-color: #333;
-	border-radius: 10px;
+.menuLink {
+	padding: 7px 5px;
+	text-decoration: none;
 }
+#b:hover {
+	background-color: red;
+}
+
+#header{
+	display: inline-block;
+	color: white;
+	top:15px;
+}
+
+#header h1 {
+	color: #333;
+	font-size: 120%;
+}
+
+#photContainer {
+	height: 200px;
+	width: 200px;
+	margin: 0px auto;
+	position: relative;
+}
+
+#phot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 200px;
+	width: 200px;
+ }
 
 .line {
 	width: 100%;
@@ -54,7 +74,6 @@
 .outer {
 	display: table;
 }
-	
 
 .middle {
 	display: table-cell;
@@ -66,72 +85,12 @@
 	color: white;
 }
 
-#header{
-	display: inline-block;
-	color: white;
-}
-
-#header h1 {
-	color: #333;
-	font-size: 120%;
-}
-
-#photContainer {
-	height: 200px;
-	width: 200px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	margin: 0px auto;
-	position: relative;
-}
-
-.ap {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-}
-.circ {
-	height: 201px;
-	width: 201px;
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	opacity: 0;
-}
-
-#phot {
-	min-height: 200px;
-	max-height: 200px;
-	min-width: 200px;
-	max-width: 200px;
- }
- #trigger {
- 	z-index: 3;
- }
-
-#shield {
-	background-color: #E4F6F8;
-	z-index: 1;
-	display: table;
-}
-#about {
-	z-index: 2;
-	display: table;
-}
-
-#topSpace {
-	height: 20px;
-}
-
 #work { 
 	background-color: #3BD4DA;
 }
 
 #school {
 	background-color: #80F66C;
-	z-index: 0;
 }
 
 #play {

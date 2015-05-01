@@ -3,37 +3,28 @@
 
 <head>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="velocity.min.js"></script>
     <script type="text/javascript", src="jscript.js"></script>
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="shourtcut icon" href="pics/pineapple.ico">
 </head>
 <body>
-	<div id="slideMenu">
-	</div>
-
 	<div id="content">
 		<div id="centeredContent">
 
-			<div class="line" id="header">
-				<!--
-				<div id="menuButton">
-					<div class="menuBar"> </div>
-					<div class="menuBar"> </div>
-					<div class="menuBar"> </div>
-				</div>
-				-->
+			<div class = "outer" id="menuBar">
+				<nav class="middle">
+					<a class="inner menuLink" id="b" href="a"> About </a><!--
+				 --><a class="inner menuLink" href="#"> Contact </a><!--
+				 --><a class="inner menuLink" href="#"> Nav </a>
+				</nav>
+			</div>
 
-				<div id="topSpace"></div>
+			<div class="line" id="header">
+
 				<div id="photContainer">
-					<a class="ap circ" id="trigger" href="#"></a>
-					<div class="ap circ" id="shield"></div>
-					<div class="ap circ" id="about">
-						<div class="middle" id="abMid">
-							About
-						</div>
-					</div>
-					<img class="ap" id="phot" src="pics/suit_circ.png">
+					<img id="phot" src="pics/suit_circ.png">
 				</div>
 				<h1>Nicholas Mehrle</h1>
 			</div>
@@ -47,11 +38,13 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="line outer" id="school">
 				<div class="middle">
 					<div class="inner" id="innerSchool">School</div>
 				</div>
 			</div>	
+
 			<div class="line outer" id="play">
 				<div class="middle">
 					<div class="inner" id="innerPlay">
