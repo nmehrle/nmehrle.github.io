@@ -21,4 +21,23 @@ $(document).ready(function() {
 			$(val).velocity({left:"0"},{duration:animationTime,queue:false});
 		});
 	});
+
+	var base = true;
+	$(".menuLink").click (function() {
+		if(base) {
+			$.each(bars, function(i,val) {
+				$(val).css("top",tops[i]+headTop+600+"px");
+			});
+			base=false;
+			$('#a').css("display","block");
+		}
+		else {
+			$.each(bars, function(i,val) {
+				$(val).css("top",tops[i]+headTop+"px");
+			});
+			base=true;
+			$('#a').css("display","none");
+
+		}
+	});
 });

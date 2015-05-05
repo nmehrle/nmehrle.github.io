@@ -57,7 +57,7 @@
 	right: 0;
 }
 
-.menuLink:link, .menuLink:visited {
+.menuLink {
 	padding: 7px 6px;
 	text-decoration: none;
 	background: -webkit-linear-gradient(#333,#333);
@@ -68,20 +68,20 @@
 	-webkit-background-size: 100% 200%;
 	-moz-background-size: 100% 200%;
 	background-size: 100% 200%;
-
 	-webkit-transition: all .2s linear;
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
-
+	z-index: 4;
+	cursor: pointer;
 }
 
-.menuLink:hover, .menuLink:focus, .menuLink:active{
+.menuLink:hover{
 	color: #333;
 	background-position: 0 -102%
 }
 
-#lst{
+#nav{
 	margin-right: -1px;
 }
 
@@ -115,6 +115,13 @@
 	width: 100%;
 	text-align: center;
 	position: absolute;
+}
+
+#a {
+	display: none;
+	top: 300px;
+	position: absolute;
+	color: #333;
 }
 
 #work { 
