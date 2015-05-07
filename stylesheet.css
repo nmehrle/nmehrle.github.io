@@ -45,14 +45,14 @@ html {
 }
 
 #menuBar {
-	right: -10%;
+	right: 0;
 	z-index: 2;
 	background-color: white;
 }
 
 #menuUnder {
 	left: -110%;
-	right: 0;
+	right: -110%;
 }
 
 .menuLink {
