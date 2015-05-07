@@ -45,7 +45,7 @@ html {
 }
 
 #menuBar {
-	right: 0;
+	right: -10%;
 	z-index: 2;
 	background-color: white;
 }
