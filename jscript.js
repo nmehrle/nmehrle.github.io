@@ -3,7 +3,7 @@ var on = false;
 $(document).ready(function() {
 	var bars = ["#work","#school","#play"];
 	var height = 135;
-	var headHeight=300;
+	var headHeight=330;
 	var headTop = 15;
 	var tops = [headHeight,headHeight+height,headHeight+2*height];
 	animationTime=200;
@@ -30,6 +30,7 @@ $(document).ready(function() {
 			});
 			base=false;
 			$('#aboutWrap').css("display","block");
+			$('#learn').css("display","none");
 		}
 		else {
 			$.each(bars, function(i,val) {
@@ -37,6 +38,8 @@ $(document).ready(function() {
 			});
 			base=true;
 			$('#aboutWrap').css("display","none");
+			$('#learn').css("display","block");
+
 
 		}
 	});
