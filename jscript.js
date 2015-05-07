@@ -23,20 +23,20 @@ $(document).ready(function() {
 	});
 
 	var base = true;
-	$(".menuLink").click (function() {
+	$("#about").click (function() {
 		if(base) {
 			$.each(bars, function(i,val) {
-				$(val).css("top",tops[i]+headTop+600+"px");
+				$(val).velocity({top:tops[i]+headTop+600+"px"});
 			});
 			base=false;
-			$('#a').css("display","block");
+			$('#aboutWrap').css("display","block");
 		}
 		else {
 			$.each(bars, function(i,val) {
-				$(val).css("top",tops[i]+headTop+"px");
+				$(val).velocity({top:tops[i]+headTop+"px"});
 			});
 			base=true;
-			$('#a').css("display","none");
+			$('#aboutWrap').css("display","none");
 
 		}
 	});
