@@ -74,6 +74,9 @@ body {
 	transition: all .2s linear;
 	z-index: 4;
 	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
 }
 
 .menuLink:hover{
