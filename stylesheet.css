@@ -1,9 +1,12 @@
 html {
 	overflow-y:scroll;
-	overflow-x: hidden;
 }
 body {
-	background-color: #F2EDE0;	
+	background-color: #F2EDE0;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;	
 }
 #content {
 	position: absolute;
@@ -54,8 +57,7 @@ body {
 }
 
 #menuUnder {
-	left: -110%;
-	right: -110%;
+	width: 100%;
 }
 
 .menuLink {
@@ -74,9 +76,6 @@ body {
 	transition: all .2s linear;
 	z-index: 4;
 	cursor: pointer;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
 }
 
 .menuLink:hover{
@@ -92,6 +91,9 @@ body {
 #header{
 	display: inline-block;
 	color: white;
+	width: 100%;
+	text-align: center;
+	position: absolute;
 }
 
 #header h1 {
@@ -125,7 +127,7 @@ body {
 .line {
 	width: 100%;
 	text-align: center;
-	position: absolute;
+	position: relative;
 	text-shadow: -1px -1px 0 #333,
 		1px -1px 0 #333,
 		-1px 1px 0 #333,
@@ -151,6 +153,30 @@ body {
 	position: relative;
 }
 
+#barsCont {
+	position: relative;
+	width: 104%;
+	left: -2%;
+	overflow-y: hidden;
+}
+
+#aboutReturn {
+	text-align: center;
+	font-weight: bold;
+	background-color: #333;
+	color: white;
+	width: 110px;
+	padding: 3px 0;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+#bars {
+	width: 96%;
+	left: 2%;
+	position: absolute;
+}
+
 #work { 
 	background-color: #3BD4DA;
 }
@@ -161,4 +187,16 @@ body {
 
 #play {
 	background-color: #F1852D;
+}
+.bar {
+	width: 100%;
+}
+
+.subWork {
+	border: 2px solid black;
+	height: 150px;
+	width: 100%;
+	background-color: blue;
+	display: none;
+	z-index: 2;
 }

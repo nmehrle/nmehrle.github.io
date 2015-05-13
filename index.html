@@ -10,13 +10,14 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script src="velocity.min.js"></script>
     <script type="text/javascript", src="jscript.js"></script>
+    <title>Nicholas Mehrle</title>
 </head>
 <body>
 	<div id="content">
 
+		<div class="menu" id="menuUnder"></div>
 
 		<div id="centeredContent">
-			<div class="menu" id="menuUnder"></div>
 			<div class = "outer menu" id="menuBar">
 				<nav class="middle">
 					<div class="inner menuLink" id="about"> About </div><!--
@@ -25,7 +26,7 @@
 				</nav>
 			</div>
 
-			<div class="line" id="header">
+			<div id="header">
 				<div id="photContainer">
 					<img id="phot" src="pics/suit_circ.png">
 				</div>
@@ -42,43 +43,34 @@
 					Hello! <br><br>
 					I'm a junior at Johns Hopkins University studying Physics, Mathematics and Statistics. I'm currently working as a research assistant at CERN in Geneva Switzerland.
 				</div>
-				<div>
-          <br>
-          <br>
-					Fast Facts:
-					<br>
-					Graduates: May 2016 <br>
-					Spending the summer at: <a style="text-decoration: none" href="http://www.optiver.com"> Optiver LLC </a> <br>
-					From: Columbus, OH <br>
-					Interest: Cooking <br>
-					Favorite Cuisine: Creole <br>
-					Knife Skills: 6/10 <br>
-					Height: 6'0" <br>
-          Least Favorite Fast and Furious Movie: Tokyo Drift <br>
-          Cannot: Dunk  <br>
-				</div>
+				<br>
+				<div id="aboutReturn">Return</div>
 			</div>
-
-			<div class="line outer" id="work">
-				<div class="middle">
-					<div class="inner" id="innerWork">
-						Work
-						<div class="textSpace"></div>
+			<div id="barsCont">
+				<div id="bars">
+					<div class="line outer" id="work">
+						<div class="middle">
+							<div class="inner bar" id="innerWork">
+								<span id="workText"> Work</span>
+								<div class="subWork"></div>
+								<div class="subWork"></div>
+								<div class="subWork"></div>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
 
-			<div class="line outer" id="school">
-				<div class="middle">
-					<div class="inner" id="innerSchool">School</div>
-				</div>
-			</div>	
+					<div class="line outer" id="school">
+						<div class="middle">
+							<div class="inner bar" id="innerSchool">School</div>
+						</div>
+					</div>	
 
-			<div class="line outer" id="play">
-				<div class="middle">
-					<div class="inner" id="innerPlay">
-						<div class="textSpace"></div>
-						Play
+					<div class="line outer" id="play">
+						<div class="middle">
+							<div class="inner bar" id="innerPlay">
+								Play
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
