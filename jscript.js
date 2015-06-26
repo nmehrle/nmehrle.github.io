@@ -27,7 +27,7 @@ $(document).ready(function() {
 				collapse(val);
 			}
 		});
-
+		
 		//click open
 		$(val).click(function() {
 			if(openStates[i]){
@@ -51,6 +51,7 @@ $(document).ready(function() {
 				openStates[i]=true;
 			}
 		});
+		
 	});
 
 	$("#about").click (function() {
@@ -102,8 +103,11 @@ function collapse(bar) {
 }
 
 function openBar(bar,i) {
-	$(bar).velocity({height:height+expHeight+"px"},{duration:animationTime,queue:false});
+	$(bar).velocity({height:height+expHeight+"px"},{duration:0,queue:false});
 	expand(bar);
+	$('html, body').animate({
+        scrollTop: height*i+headHeight+"px"
+    }, 300);
 	if(i==0) {
 		$("#workText").css("display","none");
 		$(".subWork").css("display","block");
@@ -111,8 +115,12 @@ function openBar(bar,i) {
 };
 
 function closeBar(bar,i) {
-	$(bar).velocity({height:height+"px"},{duration:animationTime,queue:false});
+	$(bar).velocity({height:height+"px"},{duration:0,queue:false});
 	collapse(bar);
+	if(i==0) {
+		$("#workText").css("display","block");
+		$(".subWork").css("display","none");
+	}
 };
 
 

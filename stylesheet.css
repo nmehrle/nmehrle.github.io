@@ -182,7 +182,7 @@ body {
 }
 
 #school {
-	background-color: #80F66C;
+	background-color: #00FF6E;
 }
 
 #play {
@@ -191,12 +191,34 @@ body {
 .bar {
 	width: 100%;
 }
-
-.subWork {
-	border: 2px solid black;
-	height: 150px;
-	width: 100%;
+.subWork{
+	height: 100px;
 	background-color: blue;
 	display: none;
-	z-index: 2;
 }
+/*
+#workText {
+	float: left;
+	margin-left: 0px;
+	width: 30%;
+}
+
+#workDescrip {
+	float: right;
+	font-size: 30px;
+	color: #333;
+	max-width: 446px;
+	width: 70%;
+	text-shadow: none;
+}
+
+#schoolText {
+	float: right;
+	margin-right: 60px;
+}
+
+#playText {
+	float: left;
+	margin-left: 60px;
+}*/
+
