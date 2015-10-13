@@ -122,6 +122,7 @@ body {
  	font-size: 70%;
  	text-shadow: none;
  	position: relative;
+ 	display: none;
  }
 
 .line {
@@ -135,7 +136,7 @@ body {
 }
 
 #aboutWrap {
-	display: none;
+	display: block;
 	top: 300px;
 	width: 100%;
 	position: absolute;
@@ -178,15 +179,19 @@ body {
 }
 
 #work { 
-	background-color: #3BD4DA;
+	/*background-color: #3BD4DA;*/
+	background-color: #999;
+
 }
 
 #school {
-	background-color: #00FF6E;
+	/*background-color: #00FF6E;*/
+	background-color: #666;
 }
 
 #play {
-	background-color: #F1852D;
+	/*background-color: #ff9f31;*/
+	background-color: #333;
 }
 .bar {
 	width: 100%;

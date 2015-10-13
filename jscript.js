@@ -2,7 +2,7 @@ var bars = ["#work","#school","#play"];
 var openStates = [false,false,false];
 var height = 135;
 var headHeight=330;
-var headTop=15;
+var headTop=20;
 var expHeight = 465;
 var tops = [0,height,2*height];
 animationTime=200;
@@ -53,7 +53,7 @@ $(document).ready(function() {
 		});
 		
 	});
-
+/*
 	$("#about").click (function() {
 		if(base) {
 			base=false;
@@ -81,7 +81,7 @@ $(document).ready(function() {
 		$('#aboutWrap').css("display","none");
 		$('#learn').css("display","block");		
 	});
-});
+});*/
 
 function anyOpen(states) {
 	for (var i = states.length - 1; i >= 0; i--) {
