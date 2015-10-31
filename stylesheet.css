@@ -2,7 +2,7 @@ html {
 	overflow-y:scroll;
 }
 body {
-	background-color: #F2EDE0;
+	background-color: #f5f1e6;
 
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -42,26 +42,30 @@ body {
 
 
 .menu{
-	height: 30px;
-	font-size: 16px;
+	height: 35px;
+	font-size: 17px;
 	text-shadow: none;
 	background-color:#333;
 	color: white;
 	position: absolute;
-}
-
-#menuBar {
-	right: 0;
-	z-index: 2;
-	background-color: white;
+	z-index: 1;
 }
 
 #menuUnder {
 	width: 100%;
 }
 
+#menuName {
+	padding: 9px 0px 8px 30px;
+}
+
+#menuClicks {
+	right: 30px;
+	background-color: white;
+}
+
 .menuLink {
-	padding: 7px 6px;
+	padding: 9px 7px;
 	background: -webkit-linear-gradient(#333,#333);
 	background: -moz-linear-gradient(#333,#333);
 	background: -o-linear-gradient(#333,#333);
@@ -74,7 +78,7 @@ body {
 	-moz-transition: all .2s linear;
 	-o-transition: all .2s linear;
 	transition: all .2s linear;
-	z-index: 4;
+	z-index: 2;
 	cursor: pointer;
 }
 
@@ -87,143 +91,46 @@ body {
 	margin-right: -1px;
 }
 
-
-#header{
-	display: inline-block;
-	color: white;
+#menuRelPos {
 	width: 100%;
-	text-align: center;
+	height: 35px;
+}
+
+/* make this section fit to height of screen i.e. 100% - 30px*/
+
+.intro{
+	height: calc(100% - 35px);
+}
+
+#introDiv{
+}
+
+#backPic {
+	max-height: 600px; 
+	height: 100%;
 	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	z-index: 0;
 }
-
-#header h1 {
-	color: #333;
-	font-size: 120%;
-}
-
-#photContainer {
-	height: 200px;
-	width: 200px;
-	margin: 0px auto;
-	position: relative;
-}
-
-#phot {
+#introWords{
 	position: absolute;
-	top: 0;
-	left: 0;
-	height: 200px;
-	width: 200px;
- }
-
- #learn {
- 	text-align: left;
- 	color: #333;
- 	font-size: 70%;
- 	text-shadow: none;
- 	position: relative;
- 	display: none;
- }
-
-.line {
-	width: 100%;
-	text-align: center;
-	position: relative;
-	text-shadow: -1px -1px 0 #333,
-		1px -1px 0 #333,
-		-1px 1px 0 #333,
-		1px 1px 0 #333;
+	top: 100px;
+	left: 300px;
 }
 
-#aboutWrap {
-	display: block;
-	top: 300px;
-	width: 100%;
-	position: absolute;
-	color: #333;
+.left {
+	width: 50%;
+	height: 300px;
+	background-color: red;
+	float: left;	
 }
 
-#aboutWrap * {
-	position: relative;
-	font-size: 30px;
-	font-weight: normal;
-}
-
-#aboutContent {
-	text-align: left;
-	position: relative;
-}
-
-#barsCont {
-	position: relative;
-	width: 104%;
-	left: -2%;
-	overflow-y: hidden;
-}
-
-#aboutReturn {
-	text-align: center;
-	font-weight: bold;
-	background-color: #333;
-	color: white;
-	width: 110px;
-	padding: 3px 0;
-	margin: 0 auto;
-	cursor: pointer;
-}
-
-#bars {
-	width: 96%;
-	left: 2%;
-	position: absolute;
-}
-
-#work { 
-	/*background-color: #3BD4DA;*/
-	background-color: #999;
-
-}
-
-#school {
-	/*background-color: #00FF6E;*/
-	background-color: #666;
-}
-
-#play {
-	/*background-color: #ff9f31;*/
-	background-color: #333;
-}
-.bar {
-	width: 100%;
-}
-.subWork{
-	height: 100px;
+.right {
+	width: 50%;
+	height: 300px;
 	background-color: blue;
-	display: none;
-}
-/*
-#workText {
-	float: left;
-	margin-left: 0px;
-	width: 30%;
-}
-
-#workDescrip {
 	float: right;
-	font-size: 30px;
-	color: #333;
-	max-width: 446px;
-	width: 70%;
-	text-shadow: none;
 }
 
-#schoolText {
-	float: right;
-	margin-right: 60px;
-}
-
-#playText {
-	float: left;
-	margin-left: 60px;
-}*/
 
