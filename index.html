@@ -6,33 +6,46 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="shourtcut icon" href="pics/Mars.png">
    	<!--<link rel="shourtcut icon" href="pics/suit_circ.png">-->
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="velocity.min.js"></script>
-    <script type="text/javascript", src="jscript.js"></script>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript", src="script.js"></script>
     <title>Nicholas Mehrle</title>
 </head>
 <body>
 	<div id="content">
-
-		<div class="menu" id="menuUnder"></div>
-		<div class="outer menu" >
-			<div class = "inner" id="menuName">
-				Nicholas Mehrle
+		<div id="theMenu">
+			<div class="menu" id="menuUnder"></div>
+			<div class="outer menu" >
+				<div class = "inner" id="menuName">
+					Nicholas Mehrle
+				</div>
 			</div>
+			<div class = "outer menu" id="menuClicks">
+				<nav class="middle">
+					<div class="inner menuLink" id="about"> About </div><!--
+				 --><div class="inner menuLink" id="contact"> Contact </div><!--
+				 --><div class="inner menuLink" id="nav"> Nav </div>
+				</nav>
+			</div>
+			<div id="menuRelPos"></div>
 		</div>
-		<div class = "outer menu" id="menuClicks">
-			<nav class="middle">
-				<div class="inner menuLink" id="about"> About </div><!--
-			 --><div class="inner menuLink" id="contact"> Contact </div><!--
-			 --><div class="inner menuLink" id="nav"> Nav </div>
-			</nav>
-		</div>
-		<div id="menuRelPos"></div>
 
 		<div class="intro" id="introDiv">
-			<img src="pics/tree.png"  id="backPic">
-			<div  id="introWords"> Nicholas Mehrle</div>
+			
+			<div  id="introWords"> 
+				<div id="introName">
+					Nicholas Mehrle
+				</div>
+				<div id="introPara">
+					Student at Johns Hopkins University
+				</div>
+			</div>
+
+			<div id="mainImg">
+				<div id="imgCont">
+					<img src="pics/tree.png"  id="backPic">
+
+				</div>
+			</div>
 		</div>
 
 		<div class="left"></div>
