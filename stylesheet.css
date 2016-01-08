@@ -165,12 +165,6 @@ body {
 }
 
 .infoBar {
-	width: 100%;`
-	margin
-	-top: 12px;
-	height: 500px;
-	padding-bottom: 12px;
-	background-color: #111;
 }
 
 .left {
@@ -183,7 +177,7 @@ body {
 
 .ibel {
 	display: inline-block;
-	height: 500px;
+	min-height: 300px;
 }
 
 .ibimg {
@@ -198,7 +192,7 @@ body {
 
 .ibtxt {
 	width: calc(100% - 290px);
-	background-color: green;
+	white-space: pre;
 	text-align: center;
 
 }
