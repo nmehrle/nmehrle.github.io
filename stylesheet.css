@@ -206,12 +206,13 @@ body {
 .ibdescrip {
 	line-height: 140%;
 	font-size: 20px;
-	text-align: justify;
+	text-align: left;
 }
 
 .ibdescripcont{
 	width: 80%;
 	display: inline-block;
+	margin-bottom: 20px;
 }
 
 
