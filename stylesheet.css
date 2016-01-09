@@ -43,7 +43,7 @@ body {
 
 
 .menu{
-	height: 45px;
+	height: 46px;
 	font-size: 22px;
 	text-shadow: none;
 	background-color:#111;
@@ -57,7 +57,7 @@ body {
 }
 
 .menuitem {
-	padding-top: 12px;
+	padding-top: 13px;
 	padding-bottom: 11px;
 }
 
@@ -115,10 +115,11 @@ body {
 	text-align: center;
 }
 #introPara {
-	font-size: 25px;
+	font-size: 28px;
 	display: inline-block;
 }
 #introName{
+	font-size: 54px;
 }
 
 #mainImg {
@@ -144,7 +145,7 @@ body {
 
 
 #learnMoreCont {
-	height: 20px;
+	height: 34px;
 	margin: 0 auto;
 	color:#fff;
 	font-size: 20px;
@@ -188,11 +189,29 @@ body {
 	margin: 20px 20px 20px 20px;
 	width: 250px;
 	border-radius: 125px;
+	border: 2px solid #111;
+	background-color: #111;
+
 }
 
 .ibtxt {
 	width: calc(100% - 290px);
-	white-space: pre;
 	text-align: center;
-
 }
+
+.ibtitle {
+	text-align: center;
+	font-size: 32px;
+}
+.ibdescrip {
+	line-height: 140%;
+	font-size: 20px;
+	text-align: justify;
+}
+
+.ibdescripcont{
+	width: 80%;
+	display: inline-block;
+}
+
+
