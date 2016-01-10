@@ -140,7 +140,7 @@ body {
 }
 
 
-#learnMoreCont {
+.learnMoreCont {
 	height: 34px;
 	margin: 0 auto;
 	color:#fff;
@@ -148,12 +148,34 @@ body {
 	text-align: center;
 }
 
-#learnMore {
+.learnMoreBlock {
 	padding: 7px 30px;
-	border-radius: 17px;
-	background-color: #111;
+	border-radius: 20px;
+	border: 3px solid #111;
+	/*background-color: #111;*/
 	display: inline-block;
+	background: -webkit-linear-gradient(#111,#111);
+	background: -moz-linear-gradient(#111,#111);
+	background: -o-linear-gradient(#111,#111);
+	background: linear-gradient(#111,#111);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 200%;
+	-moz-background-size: 100% 200%;
+	background-size: 100% 200%;
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+	z-index: 2;
+	cursor: pointer;
 }
+
+.learnMoreBlock:hover{
+	color: #111;
+	background-position: 0 -102%
+}
+
+
 
 .hrule {
 	width: 90%;
@@ -162,6 +184,7 @@ body {
 }
 
 .infoBar {
+	min-height: 300px;
 }
 
 .left {
@@ -211,5 +234,6 @@ body {
 	display: inline-block;
 	margin-bottom: 20px;
 }
+
 
 
