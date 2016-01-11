@@ -7,7 +7,10 @@ body {
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	user-select: none;	
-	font-variant: small-caps;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit;
 }
 
 #content {
@@ -103,7 +106,7 @@ body {
 	height: 90%; /*fallback if calc not supported */
 	height: calc(100% - 65px - 33px);
 	max-height: 900px;
-	min-height: 700px;
+	min-height: 690px;
 }
 
 
@@ -170,6 +173,7 @@ body {
 	transition: all .2s linear;
 	z-index: 2;
 	cursor: pointer;
+	text-decoration: none;
 }
 
 .learnMoreBlock:hover{
@@ -226,7 +230,7 @@ body {
 	font-size: 32px;
 }
 .ibdescrip {
-	line-height: 140%;
+	line-height: 125%;
 	font-size: 20px;
 	text-align: left;
 }
@@ -235,6 +239,49 @@ body {
 	width: 80%;
 	display: inline-block;
 	margin-bottom: 20px;
+}
+
+#footer {
+	text-align: center;
+	height: 200px;
+}
+
+#footerel {
+	width: 600px;
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.contact{
+	display: inline-block;
+	float: left;
+	font-size: 22px;
+	color: #fff;
+	background-color: #111;
+	height: 100%;
+	padding: 7px 30px;
+	border-radius: 40px;
+}
+
+#emailText {
+	line-height: 40px;
+}
+
+#emailPic {
+	background-color: #fff;
+}
+
+#linkedin {
+	float: right;
+}
+
+.footerPic {
+	vertical-align: top;
+	height: 40px;
+}
+
+#lastUpdate{
+	font-size: 16px;
 }
 
 
