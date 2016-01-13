@@ -11,17 +11,40 @@ body {
 
 a, a:visited, a:hover, a:active {
   color: inherit;
+  text-decoration: none;
+}
+
+.linTrans {
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+
+.dropDownBack {
+	background: -webkit-linear-gradient(#111,#111);
+	background: -moz-linear-gradient(#111,#111);
+	background: -o-linear-gradient(#111,#111);
+	background: linear-gradient(#111,#111);
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 200%;
+	-moz-background-size: 100% 200%;
+	background-size: 100% 200%;
+	cursor: pointer;
+}
+
+.dropDownBack:hover{
+	color: #111;
+	background-position: 0 -102%
 }
 
 #content {
 	position: absolute;
 	left: 0;
-	width: 100%;
-	height: 100%;
 	font-weight: bold;
 	font-family: sans-serif;
 	font-size: 300%;
-	overflow-x: hidden;
+	overflow-x: scroll;
 }
 
 #centeredContent {
@@ -77,25 +100,6 @@ a, a:visited, a:hover, a:active {
 .menuLink {
 	padding-right:16px;
 	padding-left: 16px;
-	background: -webkit-linear-gradient(#111,#111);
-	background: -moz-linear-gradient(#111,#111);
-	background: -o-linear-gradient(#111,#111);
-	background: linear-gradient(#111,#111);
-	background-repeat: no-repeat;
-	-webkit-background-size: 100% 200%;
-	-moz-background-size: 100% 200%;
-	background-size: 100% 200%;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
-	z-index: 2;
-	cursor: pointer;
-}
-
-.menuLink:hover{
-	color: #111;
-	background-position: 0 -102%
 }
 
 #nav{
@@ -105,7 +109,7 @@ a, a:visited, a:hover, a:active {
 .intro{
 	height: 90%; /*fallback if calc not supported */
 	height: calc(100% - 65px - 33px);
-	max-height: 900px;
+	max-height: 800px;
 	min-height: 690px;
 }
 
@@ -146,7 +150,7 @@ a, a:visited, a:hover, a:active {
 
 
 .learnMoreCont {
-	height: 34px;
+	height: 40px;
 	margin: 0 auto;
 	color:#fff;
 	font-size: 20px;
@@ -159,29 +163,7 @@ a, a:visited, a:hover, a:active {
 	border: 3px solid #111;
 	/*background-color: #111;*/
 	display: inline-block;
-	background: -webkit-linear-gradient(#111,#111);
-	background: -moz-linear-gradient(#111,#111);
-	background: -o-linear-gradient(#111,#111);
-	background: linear-gradient(#111,#111);
-	background-repeat: no-repeat;
-	-webkit-background-size: 100% 200%;
-	-moz-background-size: 100% 200%;
-	background-size: 100% 200%;
-	-webkit-transition: all .2s linear;
-	-moz-transition: all .2s linear;
-	-o-transition: all .2s linear;
-	transition: all .2s linear;
-	z-index: 2;
-	cursor: pointer;
-	text-decoration: none;
 }
-
-.learnMoreBlock:hover{
-	color: #111;
-	background-position: 0 -102%
-}
-
-
 
 .hrule {
 	width: 90%;
@@ -247,41 +229,80 @@ a, a:visited, a:hover, a:active {
 }
 
 #footerel {
-	width: 600px;
 	margin: 0 auto;
 	display: inline-block;
+	color: #fff;
 }
 
 .contact{
 	display: inline-block;
-	float: left;
 	font-size: 22px;
+	float: left;
 	color: #fff;
-	background-color: #111;
 	height: 100%;
 	padding: 7px 30px;
 	border-radius: 40px;
+	border: 3px solid #111;
+	margin-bottom: 20px;
 }
 
-#emailText {
+.contact:hover .topPic {
+	opacity: 0;
+}
+
+.footText {
 	line-height: 40px;
 }
 
-#emailPic {
-	background-color: #fff;
+#emailText {
+	/*padding-left: 62px;*/
 }
 
-#linkedin {
-	float: right;
+.whiteBack {
+	background-color: #fff;
+	
+}
+
+.blackBack {
+	background-color: #111;
+	z-index: 1;
+}
+
+#linkedInText {
+	padding-left: 162px;
+}
+
+.topPic {
+	z-index: 2;
+}
+
+.botPic {
+	z-index: 1;
 }
 
 .footerPic {
 	vertical-align: top;
 	height: 40px;
+	position: absolute;
+}
+
+.gitPic {
+	border-radius: 50%;
+}
+
+#gitText {
+	padding-left: 62px;
+	font-size: 30px;
 }
 
 #lastUpdate{
 	font-size: 16px;
+}
+
+.footSep {
+	width: 20px;
+	height: 20px;
+	float: left;
 }
 
 
