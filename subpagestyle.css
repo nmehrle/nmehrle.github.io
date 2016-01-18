@@ -1,0 +1,26 @@
+.subel {
+	display: inline-block;
+	min-height: 500px;
+}
+
+.subimg {
+	width: 50%;
+	max-width: 650px;
+}
+
+.subimg img {
+	margin: 20px 20px 20px 20px;
+	width: 100%;
+	height: auto;
+	border-radius: 173px;
+	border: 6px solid #111;
+	background-color: #111;
+
+}
+
+.subtxt {
+	width: calc(100% - 55%);
+	min-width: calc(100%-650px);
+	margin-right: 2%;
+	text-align: center;
+}
