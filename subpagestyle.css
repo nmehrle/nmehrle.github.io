@@ -1,6 +1,6 @@
 .subel {
 	display: inline-block;
-	min-height: 500px;
+	min-height: 475px;
 }
 
 .subimg {
@@ -18,9 +18,23 @@
 
 }
 
+.right img {
+	float: right
+}
+.left img {
+	float: left;
+}
+
 .subtxt {
 	width: calc(100% - 55%);
 	min-width: calc(100%-650px);
 	margin-right: 2%;
+	margin-left: 2%;
 	text-align: center;
+}
+
+.ibsubtitle {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 10px;
 }
