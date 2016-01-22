@@ -2,11 +2,7 @@ html {
 	overflow-y:scroll;
 }
 body {
-	background-color: #fff;
-
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;	
+	background-color: #fff;	
 }
 
 a, a:visited, a:hover, a:active {
