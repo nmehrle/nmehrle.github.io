@@ -173,8 +173,18 @@ a, a:visited, a:hover, a:active {
 	border-radius: 125px;
 	border: 2px solid #111;
 	background-color: #111;
-
+	z-index: 1;
 }
+
+#test {
+	margin: 20px 20px 20px 20px;
+	width: 250px;
+	height: 250px;
+	border-radius: 125px;
+	border: 0px;
+	background-color: #111;
+}
+
 .ibimg a {
 	display: block;
 	width: 254px;
@@ -183,6 +193,7 @@ a, a:visited, a:hover, a:active {
 	margin-left: 20px;
 	margin-top: 20px;
 	border-radius: 125px;
+	z-index: 0;
 }
 
 .ibtxt {
