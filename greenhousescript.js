@@ -155,7 +155,6 @@ $(document).ready( function() {
 
 
   		Nw = Math.round((ps*Math.exp(-L/R/groundTemp)/Math.pow(groundTemp,2)))+1;
-  		console.log(Nw);
   		curNw = 0;
   		for (var i = theParticles.length - 1; i >= 0; i--) {
   			if(theParticles[i].species == h2o) curNw++;
