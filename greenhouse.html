@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> Runaway Greenhouse Effect</title>
+	<link rel="stylesheet" type="text/css" href="greenhousestyle.css">
+	<link rel="shourtcut icon" href="pics/Venus.png">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" >
+	  	var fps = 60; //frames per second
+	  	var r = 5;	//particle size
+	  	var v = 5; //particle speed
+	  	var c = 10; //photon speed
+	  	var pr = 2; //photon size
+	  	var t = 1;  //timestep (seconds)
+	  	var stefanBoltzmann = 2.3e-8; //changed from reality so S=50 ~= T=200
+	  	var R = 8.31;
+	  	var L = 43665;
+	  	var V = .188;
+	  	var ps = 1.4e11;
+
+
+	  	var excitedTime = fps/2;
+	  	var pup = 0.5;
+	  	var solarMinX = 40;
+	  	var solarMaxX = 120; 
+	  	var solarMinY = 90;
+	  	var solarMaxY = 130;
+	  	var volcanicTime = 10; //  1/(Volcanic emmision rate) (seconds) 
+	  	var volcanoX = 490; 
+	  	var volcanoY = 320; 
+
+	  	var lakeX = 170;
+	  	var lakeW = 183;
+	  	var lakeY = 430;
+	  	var lakeD = 60;
+	  	var maxNw = 500;
+
+	  	var topOfAtmos = 100;
+	  	
+	  	var thermoBaseY = 427;
+	  	var thermoBaseX = 29.7;
+	  	var thermoWidth = 38.6;
+	  	var thermoHeight = 407;
+	  	var thermoRange = 700.0; // arbitrary
+	  	var dT = thermoHeight/thermoRange;
+
+	  	var S=50;
+
+	  	var co2 = {
+	  		color: "black",
+	  		absorbP:1
+	  	}
+	  	var n2 = {
+	  		color: "green",
+	  		absorbP:0
+	  	}
+	  	var h2o = {
+	  		color: "blue",
+	  		absorbP:1
+	  	}
+	</script>
+	<script type="text/javascript" src="particles.js"></script>
+	<script type="text/javascript" src="greenhousescript.js"></script>
+
+</head>
+
+<body>
+  <h1 id="title">
+    The Runaway Greenhouse Effect
+  </h1>
+
+  <div id="cont">
+    <img id="bg" src="world.png" ></img>
+    
+    <canvas id="theCanvas" width="600" height="500">
+    	Canvas not supported, please update your browser.
+    </canvas>
+   <canvas id="tempCanvas" width="100" height="500">
+    	Canvas not supported, please update your browser.
+    </canvas>
+    <img id="tempbg" src ="thermometer.jpeg"></img>
+  </div>
+
+  <div class="input">
+  	<input type="button" value="Start" id="startButton">
+  	<input type="button" value="Stop" id="stopButton">
+  	<input type="checkbox" id="hideParticles" onchange="drawAts();"> Hide Particles 
+  </div>
+  <div class="input">
+  	Solar Constant <input type="range" id="Sslider" min="0" max = "700" step="10" value = "100" oninput="" onchange="">
+  </div>
+  <div class="input">
+  	Volcanic Emission <input type="range" id="Vslider" min="0" max = "500" step="1" value = "10" oninput="" onchange="">
+  </div>
+
+  <h3 class="centered topSpace"> About </h3>
+  <p class="text">This is a qualitative demonstration of the runaway greenhouse effect, intended to provide a general idea of how such a process works. The planet Venus is like Earth in many ways. Both are about the same size and about the same distance from the Sun. However, Earth is habitable whereas Venus is host to incredibly high pressures and temperatures. One possibility for how 
+  Venus ended up like this is the runnaway greenhouse effect. It is also thought that earlier in it's lifetime Venus had oceans like Earth (It doesn't anymore). The runnaway greenhouse effect could explain what happened to these oceans. </p>
+  <p class="text">
+  	What you see in the simulation is solar radiation transfered from the sun to the planet (yellow dots), and infrared radiation from the planet to space (red dots). The amount of radiation is related to the temperature of the body. The atmosphere of the planet has three components: a non-greenhouse gas (like N2) in green, a non-condensible greenhouse gas (like CO2) in black, and a condensible greenhouse gas (like H2O) in blue. The gauge on the right gives the temperature of the planet at equilibrium for a given composition of the atmosphere. The sliders below allow you to alter the solar constant (move the planet closer to the sun), and release/remove CO2 from the atmosphere. It is assumed CO2 is released by volcanism.
+  </p>
+  <p class="text">
+  	In this model, the planets temperature is determined by balancing the outgoing flux of the planet with the incoming flux from the sun. The presence of greenhouse gasses in the atmosphere causes the planet to heat up. The greenhouse gases absorb radiation from the planet and reflect it back to the surface, returning that energy. Here, there is a feedback between the temperature of the planet and the amount of water in the atmosphere. Thus, as the temperature rises, more water vapor is deposited in the atmosphere which causes the temperature to rise further. At a certain value of the solar constant, known as the Kombayashi-Ingersoll limit, the ocean goes from stable to unstable. This is because around this limit, the temperature is extremely sensitive to changes in the solar constant.  
+  </p>
+
+  <h3 class="centered topSpace"> What to look for </h3>
+  <p class="text">
+  	What you want to do with this simulation is observe the greenhouse effect. Try increasing the amount of CO2 in the atmosphere by moving the bottom slider. Observe how the temperature of the planet increases. If you add enough CO2, you should notice an increase in the amount of H2O in the atmosphere. The H2O further raises the planets temperature. 
+  </p>
+  <p class="text">
+  	If you increase the solar constant, you should notice the plant's temperature increases. You should also notice that the ocean begins to evaporate on the planet. If you increase the solar constant above the Kombayashi-Ingersoll limit, the entire ocean evaporates! Try and find this limit. Observe how around this limit, the temperature of the planet (and the amount of water in the ocean) is extremely sensitive to changes in the solar constant. 
+  	<br>
+  	<br>
+  	(Hint: the limit is around the letter 'l' in "hide particles" for starting CO2 levels).
+
+  <h3 class="centered topSpace"> What about Venus? </h3>
+  <p class="text">This model does not perfectly describe what is believed to have happened to Venus. It is thought that Venus posessed a water ocean and then as the sun heated up (as it transitioned into its main sequence), the Kombayashi-Ingersoll limit was exceeded and the ocean evaporated. This is the process demonstrated here. After this, the water in the atmosphere was broken apart by UV radiation and the resultant H2 escaped from the planet. With no more water, the reactions that bind CO2 to rocks couldn't take place, and the atmosphere filled up with CO2 to its current state. </p>
+
+  <h3 class="centered topSpace"> Assumptions </h3>
+  <p class="text"> First and foremost, this is a one dimensional model for a static atmosphere. For this model, we have assumed that the sun emits in the visible spectrum and the planet emits in the infrared. Both are assumed to be perfect blackbodies. We have then assumed that the visible light does not interact with the atmosphere, whereas the CO2 and H2O absorb in the infrared and emit isotropically. The N2 in the atmosphere does not interact with the light at all. All absorbtion/emission processes are assumed to be "gray" that is, without a dependance on wavelength. 
+  </p>
+  <p class="text">For the temperature profile of the atmosphere, I have made the Eddington approximation, where flux increases linearly with optical depth. I have assumed that both greenhouse species, CO2 and H2O, have the same absorbtion cross section. The optical depth is then proportional to the number density of CO2 and H2O in the atmosphere.
+  </p>
+  <p class="text">I have assumed that the pressure at the surface of the planet is equal to the saturation pressure of water, in order to put the vapor and liquid states of H2O in equilibrium. The amount of H2O in the atmosphere is then determined by the ideal gas law for a given pressure and temperature. For this, I have assumed the atmosphere is a fixed volume. </p>
+  <p class="text">
+    While these assumptions do not allow us to present a correct quantitative value of the planets temperature for various scenarios, they do provide the correct qualitative explanation in that these results agree with those from more complicated models (See sources, particularly Pierrehumbert 2011). I have elected to include no numbers in this simulation as I believe that they could not be of sufficient accuracy to be meaningful. All results are presented qualitatively. 
+  </p>
+
+  <h3 class="centered topSpace"> Sources </h3>
+  <p class="text" style="text-indent:0px">Thermometer picture: http://clipartion.com/free-clipart-15368/ (Accessed 5/3/2016)
+  	<br> Anderw P. Ingersol, <i> The Runaway Greenhouse: A History of Water on Venus</i>, Journal of the Atmospheric Sciences, Volume 26, November 1969
+  	<br> Raymond T. Pierrehumbert, <i> Principles of Planetary Climate </i> Cambridge University Press, 2011/
+  	<br> Shinchi Nakajima, Yoshi-Yuki Hayashi, Yutaka Abe, <i>A Study on the "Runaway Greenhouse Effect" with a One-Dimensional Radiative-Convective Equilibrium Model</i> Journal of the Atmospheric Sciences, Vol. 49, 1992.
+  </p>
+
+
+<script>
+
+</script>
+</body>
+
+
+</html>

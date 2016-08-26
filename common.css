@@ -163,6 +163,10 @@ a, a:visited, a:hover, a:active {
 	text-decoration: underline;
 }
 
+.topMargin {
+	margin-top: 10px;
+}
+
 .hrule {
 	width: 90%;
 	height: 2px;
@@ -179,6 +183,10 @@ a, a:visited, a:hover, a:active {
 
 .right{
 	float: right;
+}
+
+.center{
+	text-align: center;
 }
 
 .ibel {
