@@ -27,13 +27,14 @@ Optiver US LLC - Chicago, IL
 Johns Hopkins University - Batimore, MD 
 	Research Assistant - Department of Physics and Astronomy  May 2013 - May 2016  
 
-	-Designed and constructed variable delay polarization modulator for microwave band telescope
+	-Constructed variable delay polarization modulator for microwave band telescope
 	-Wrote master’s thesis on telescope design and physics of Cosmic Microwave Background
 
 CERN - Geneva, Switzerland
 	Research Assistant - CMS Experiment  Jan - May 2015 
 
 	-Performed statistical analysis to discriminate production methods of Higgs boson
+	-Contributed to statistical software package used on the CMS experiment
 
 
 Johns Hopkins University Applied Physics Lab - Laurel, MD
