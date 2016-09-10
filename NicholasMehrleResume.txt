@@ -65,9 +65,9 @@ Papers
 Miscellaneous
 =============
 
-Programming: 
-	Python, Java, JavaScript, C, C, Matlab, Mathematica, R, HTML
-	CSS, LaTeX, VBA
+Computer Skills: 
+	Python, Java, JavaScript, C, C++, Matlab, Mathematica, R, HTML
+	CSS, LaTeX, VBA, SolidWorks
 
 Organizations:  
 	Phi Beta Kappa, Sigma Pi Sigma, Johns Hopkins Mock Trial, Wading Team
