@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.titleBox {
+	max-width: 800px;
+}
+
+hr {
+	border-color: #333333 !important;
+}
+
+.space-2 {
+    width: 100%; 
+    font-size: 0; 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    display: block;
+    margin-top: 2%;
+}
+
+.space-5 {
+    width: 100%; 
+    font-size: 0; 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    display: block;
+    margin-top: 5%;
+}
+
+.email {
+	text-decoration: none;
+	color: #666666;
+	cursor: pointer;
+}
+
+.email:focus, .email:hover {
+	color: #666666;
+	text-decoration: underline;
+}
