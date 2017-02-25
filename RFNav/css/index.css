@@ -1,5 +1,6 @@
 .bg {
 	background: url('../img/city-fog.jpg') no-repeat center center fixed;
+	/*Image by Tom Harpel, licensed under the Creative Commons Attribution 2.0 Generic license.*/
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
