@@ -1,0 +1,20 @@
+{
+  "languages": {
+      "default": {
+        "en": "English"
+      },
+      "additional": {
+        "fr": "Français",
+        "es": "Español"
+      }
+  },
+  "en": {
+      "title": "Evolution of the Universe"
+  },
+  "fr": {
+      "title": "Prochainement en français"
+  },
+  "es": {
+      "title": "Próximamente en español"
+  }
+}

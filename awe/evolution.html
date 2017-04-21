@@ -1,0 +1,200 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<meta name="description" content="">
+  	<meta name="author"       content="Nicholas Mehrle">
+  	<meta name="keywords"     content="">
+
+  	<title>Evolution of the Universe</title>
+
+  	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Custom Styling --> 
+    <link rel="stylesheet" type="text/css" href="vendor/vis.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/nv.d3.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="help-tip.css">
+  	<link rel="stylesheet" type="text/css" href="custom-slider.css">
+
+    <link rel="stylesheet" type="text/css" href="evolution.css">
+
+    <link rel="shourtcut icon" href="img/galaxy_clipart.png">
+	</head>
+  <body>
+    <div class="container-fluid" id="main">
+
+      <div class="row">
+        <h1 id="title" class="title text-center"> Evolution of the Universe </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"> 
+          <div class="intro-underline"></div>
+          <div id="intro-paragraph" class="description-paragraph text-left"> 
+            <button class="minimize-btn btn" id="minimizeButton" type="button"> &ominus;</button> 
+            <p class="text-center" id="description-main">This applet is designed to illustrate the relationship between the energy density and curvature of the universe.</p>
+            <ul id="description-bullets">
+              <li> 
+                Use the slider labeled
+                <img class="inline-img" src="img/omega_14_dark.png" title="Omega" alt="Omega"> 
+                to vary the energy density of the universe, and then observe how it's curvature changes. 
+              </li>
+              <li>
+                Use the overlay buttons to observe how the curvature affects different geometric properties. 
+              </li>
+              <li>
+                Hover over the <div class="mock-help-tip"></div> symbols to learn more about a specific topic. 
+              </li>
+              <li>
+                When you're done, <a href="evolution.html" class="text-link">click here to learn how the universe evolves!</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-10 col-lg-offset-1 col-xs-12 graphs-container">
+          <div class="row">
+            <div class="col-xs-6 graph" id="Line-Graph">
+              <button class="new-series-btn btn" id="doButton" type="button"> <span>&oplus;</span><span id="new-series">New Series</span></button> 
+              <svg class="full-size"> </svg>
+            </div>
+            <div class="graph-divider"> </div>
+            <div class="col-xs-6 graph vis-container">
+              <div class="full-size absolute" id="Surface-Graph"> </div>
+              <div class="full-size absolute" id="Dot-Graph"> </div>
+              <div class="help-tip">
+                <div class="helptip-main">
+                  hi
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row component-input-container">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12">
+          <div class="row">
+            <div class="col-xs-4 component-input">
+              <h3>Radiation</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_r.png" title="Omega r" alt="Omega r"></td>
+                <td>
+                  <input type="range" class="input-slider" id="radiationSlider" min="0" max = "2" step="0.01" value = "0">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Rad-Val"> 0.0 </p>
+                </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-xs-4 component-input">
+              <h3>Matter</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_m.png" title="Omega m" alt="Omega m"></td>
+                <td>
+                  <input type="range" class="input-slider" id="matterSlider" min="0" max = "2" step="0.01" value = "0.3">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Mat-Val"> 0.3 </p>
+                </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-xs-4 component-input">
+              <h3>Dark Energy</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_l.png" title="Omega Lambda" alt="Omega Lambda"></td>
+                <td>
+                  <input type="range" class="input-slider" id="lambdaSlider" min="0" max = "2" step = "0.01" value = "0.7">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Lam-Val"> 0.7 </p>
+                </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="row button-row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10">
+          <div class="row"> -->
+            <!-- <div class="col-xs-4">
+              <div class="button-container text-center">
+                <button class="btn btn-default btn-lg" id="doButton" type="button"> Compute </button>
+              </div>
+            </div> -->
+          <div class="text-center">
+            <div class="presets-container">
+              <table>
+              <tr>
+                <!-- <td>
+                  <h4>Presets:</h4>
+                </td> -->
+                <td>
+                  <button class="btn btn-default" id="benchmarkButton" type="button"> Benchmark </button>
+                </td>
+                <td>
+                  <button class="btn btn-default" id="bounceButton" type="button">Bounce</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" id="crunchButton" type="button">Crunch</button>
+                </td>
+                <td>
+                  <button class="btn btn-default" id="loiteringButton" type="button">Loitering</button>
+                </td>
+              </tr>
+              </table>
+            </div>
+          </div>
+          <!--</div>
+        </div>
+      </div> -->
+
+      <div class="btn-group dropup lang-group">
+        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="active-language">English</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu additional-languages">
+        </ul>
+      </div>
+
+    </div>
+  </body>
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- <script type="text/javascript" src="/Users/nicholasmehrle/Documents/web/js/vis/dist/vis-graph3d.min.js"></script>  -->
+    <script type="text/javascript" src="loadtext.js"></script>
+    <script type="text/javascript" src="vendor/vis-graph3d.min.js"></script>
+    <script type="text/javascript" src="vendor/d3.v3.min.js"></script>
+    <script type="text/javascript" src="vendor/nv.d3.min.js"></script>
+    <script type="text/javascript" src="evolution.js"></script>
+</html>
