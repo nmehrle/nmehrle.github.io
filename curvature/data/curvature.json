@@ -1,0 +1,58 @@
+{
+  "languages": {
+      "default": {
+        "en": "English"
+      },
+      "additional": {
+        "fr": "Français",
+        "es": "Español"
+      }
+  },
+  "en": {
+      "title": "Curvature of the Universe",
+      "description-main": "This page is designed to illustrate the relationship between the energy density and curvature of the universe.",
+      "description-bullets": [
+        "Use the slider labeled <img class='inline-img' src='img/omega_explanation.png' title='Omega' alt='Omega'> to vary the energy density of the universe, and then observe how it's curvature changes.",
+        "Use the overlay buttons to observe how the curvature affects different geometric properties.",
+        "Hover over the <div class='mock-help-tip'></div> symbols to learn more about a specific topic.",
+        "When you're done, click <a href='evolution.html'>here</a> to learn how the universe evolves!"
+      ],
+      "main-frame-helptip": [
+        "This frame depicts a two dimensional universe in three dimensional space. It models our own three-dimensional universe thought to exist inside a higher dimensional space.",
+        "Although the universe bends into the third dimension, it remains a 2D surface. People travelling through it wouldn't notice moving in the third dimension. Sorf of like how when you move along the surface of the Earth, you don't notice the Earth's curvature!"
+      ],
+      "overlay-helptip": [
+        "Universes with curvature (<img src='img/omega_neq_1_helptip.png' title='Omega =/= 1' alt='Omega =/= 1'>) have strange and unfamiliar behavior for even basic geometric shapes. Click on the buttons below to overlay these shapes on your universe and learn how a curved universe changes their properties.",
+        "This is because curved universes exhibit <span class='highlight'> non-euclidean geometry</span>.When <img class='inline-img' src='img/omega_<_1_helptip.png' alt='Omega less than 1' title='Omega less than 1'> the universe exhibits hyperbolic geometry. For <img class='inline-img' src='img/omega_>_1_helptip.png' alt='Omega greater than 1' title='Omega greater than 1'> the universe exhibits elliptic geometry."
+      ],
+      "overlay-title": "Overlays",
+      "none-name": "None",
+      "triangle-name": "Triangle",
+      "parallel-name": "Parallel Lines",
+      "triangle-descrip": "The sum of the angles in a triangle depends on the curvature of the universe, as below:",
+      "flat-universe": "Flat Universe",
+      "open-universe": "Open Universe<br>(<img src='img/omega_<_1_box.png' alt='Omega less than 1' title='Omega less than 1'>)",
+      "closed-universe": "Closed Universe<br> (<img src='img/omega_>_1_box.png' alt='Omega greater than 1' title='Omega greater than 1'>)",
+      "triangle-advanced": "By adding up the angles in a triangle, we can learn about the surface the triangle rests on. <br><br> The radius of curvature (<img class='inline-img' src='img/R.png' title='R' alt='R'>) of a surface and its angles (<img class='inline-img' src='img/abc.png' title='a, b, c' alt='a, b, c'>) are related as: <br> <img src='img/triangle_relation.png' alt='a + b + c = pi +- A/R^2' title='a + b + c = pi +- A/R^2'> <br> Where <img class='inline-img' src='img/A.png' title='A' alt='A'> is the area of the triangle. ",
+      "advanced-name": "Advanced",
+      "back-name": "Back",
+      "parallel-descrip": "The behavior of parallel lines depends on the curvature of the universe, as below:",
+      "never-meet": "Never Meet",
+      "curve-away": "Curve Away",
+      "curve-toward": "Curve Toward",
+      "parallel-advanced": "In curved universes, the shortest distance between two points is no longer a straight line, and is called a <a href='https://en.wikipedia.org/wiki/Geodesic'>Geodesic</a>. For a sphere, which has positive curvature, the geodesic is a circle who shares a center with the sphere. <br><br> The notion of parallel lines is replaced by two geodesic lines which are parallel at a point",
+      "omega-helptip": [
+          "The shape of the universe is determined by how much stuff (in the form of energy) is in it. We describe the amount of stuff by <img class='inline-img' src='img/omega_helptip.png' alt='Omega' title='Omega'> (Omega), known as the density parameter. More stuff (energy) means a larger value for <img class='inline-img' src='img/omega_helptip.png' alt='Omega' title='Omega'>, and less stuff means a smaller value. The exact relationship is given by something called the <a href='https://en.wikipedia.org/wiki/Friedmann_equations'> Friedmann equations</a>.",
+          "<img class='inline-img' src='img/omega_helptip.png' alt='Omega' title='Omega'> is defined as the ratio between the energy density (<img class='inline-img' src='img/epsilon_helptip.png' alt='epsilon' title='epsilon'>) of the universe and the critical energy density, <img class='' src='img/epsilon_c_helptip.png' alt='epsilon_c' title='epsilon_c'>, where <img class='' src='img/epsilon_c_helptip.png' alt='epsilon_c' title='epsilon_c'> is the exact amount of energy necessary to make the universe flat. <br><br> Thus, for <img class='inline-img' src='img/omega_=_1_helptip.png' alt='Omega = 1' title='Omega = 1'> the universe is flat!",
+          "When <img class='img-bump' src='img/omega_>_1_helptip.png' alt='Omega > 1' title='Omega > 1'>, the universe is said to have positive curvature, or be closed. This is because in the absence of dark energy, this kind of universe will eventually collapse down on itself <br><br> When <img class='img-bump' src='img/omega_<_1_helptip.png' alt='Omega < 1' title='Omega < 1'>, the universe is said to have negative curvature, or be open. This kind of universe will expand forever even without dark energy. <br><br> Experiment with the evolution of the universe <a href='evolution.html'>here</a>",
+          "So what is the value of <img class='inline-img' src='img/omega_helptip.png' alt='Omega' title='Omega'> in our universe? <br><br> According to the most recent (2015) results of the <a href='https://arxiv.org/abs/1502.01589'> Planck Survey</a>, <img class='inline-img' src='img/omega_helptip.png' alt='Omega' title='Omega'> is within 0.005 of 1. So we live in a flat universe!"
+      ]
+
+  },
+  "fr": {
+      "title": "Prochainement en français"
+  },
+  "es": {
+      "title": "Próximamente en español"
+  }
+}

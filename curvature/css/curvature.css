@@ -5,13 +5,80 @@ body {
 	background-color: #FFF8E7;
 }
 
-.title {
-	font-weight: bold;
-	margin-bottom: 2px;
+a {
+	color: inherit;
+	text-decoration: underline;
 }
+
+canvas {
+	cursor: move;
+}
+
+
+/*Utility Classes*/
+.hidden {display: none;}
 
 .highlight {
 	color: #dddd50;
+}
+
+.inline-img {
+	vertical-align: inherit;
+}
+
+.img-bump {
+	margin-bottom: 3px;
+}
+
+/*Help-tip Helpers*/
+.help-tip .helptip-main {
+	font-size: 14px;
+}
+
+.help-tip .helptip-paginated {
+	padding-bottom: 5px;
+}
+
+.helptip-behind {
+	display: none;
+}
+
+.page-controls span {
+	line-height: 30px;
+	vertical-align: bottom;
+	padding: 0 1px 0 2px;
+}
+
+.current-page {
+	padding: 0 !important;
+}
+
+.page-count {
+	padding: 0 !important;
+}
+
+.page-control-btn {
+	font-size: 30px;
+	padding: 0px;
+	line-height: 30px;
+	background-color: #1E2021;
+	color: white;
+	outline: none;
+	text-decoration: none;
+}
+
+.page-control-btn:focus, .page-control-btn:active{
+		outline: none !important;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		background-image: none;
+	}
+
+
+/*Header*/
+.title {
+	font-weight: bold;
+	margin-bottom: 2px;
 }
 
 .intro-underline {
@@ -55,18 +122,6 @@ body {
 	content: '?';
 }
 
-.text-link {
-	text-decoration: underline;
-	color: #333;
-	font-size: 14px;
-}
-
-.text-link:hover {
-	color: #000;
-	font-weight: bold;
-	font-size: 16px;
-}
-
 .minimize-btn {
 		background-color: #FFF8E7;
 		position: absolute;
@@ -85,66 +140,14 @@ body {
 		background-image: none;
 	}
 
-.inline-img {
-	vertical-align: inherit;
-}
 
-
-.help-tip .helptip-main {
-	font-size: 14px;
-}
-
-.help-tip .helptip-paginated {
-	padding-bottom: 5px;
-}
-
-.helptip-behind {
-	display: none;
-}
-
-.page-controls {
-	/*height: 40px;*/
-	/*margin-bottom: -5px;*/
-}
-
-.page-controls span {
-	line-height: 30px;
-	vertical-align: bottom;
-	padding: 0 1px 0 2px;
-}
-
-.current-page {
-	padding: 0 !important;
-}
-
-.page-count {
-	padding: 0 !important;
-}
-
-.page-control-btn {
-	font-size: 30px;
-	padding: 0px;
-	line-height: 30px;
-	background-color: #1E2021;
-	color: white;
-	outline: none;
-}
-
-.page-control-btn:focus, .page-control-btn:active{
-		outline: none !important;
-		-webkit-box-shadow: none;
-		box-shadow: none;
-		background-image: none;
-	}
-
+/*Main Body*/
 .body-row {
 	margin-top: 15px;
 }
 
 .vis-container {
 	position: relative;
-	/*max-width: 700px;
-	min-width: 400px;*/
 	height: 450px;
 	border: 3px solid #333333;
 
@@ -161,7 +164,11 @@ body {
 	width: 500px;
 }
 
-
+@media (max-width: 520px) {
+	.vis-container .help-tip  .helptip-main{
+		width: 300px;
+	}
+}
 
 .vis-graph {
 	position: absolute;
@@ -180,9 +187,9 @@ body {
 	}
 }
 
+/*Overlay Stuff*/
 .overlay-vertical {
 	background-color: #333333;
-	/*margin-left: 10px;*/
 	border-radius: 5px;
 	min-width: 146px;
 	position: relative;
@@ -195,10 +202,6 @@ body {
 	margin-bottom: 3px;
 }
 
-
-.overlay-vertical .help-tip {
-}
-
 .overlay-title {
 	font-size: 24px;
 	padding-top: 10px;
@@ -208,6 +211,15 @@ body {
 
 .overlay-buttons {
 	padding-bottom: 18px;
+}
+
+.overlay-button > p {
+	margin: 0;
+}
+
+.overlay-vertical-container {
+	position: relative;
+	height: 0px;
 }
 
 .overlay-descrip {
@@ -225,6 +237,10 @@ body {
 	max-width: 220px;
 	margin: 0 auto;
 	margin-top: 10px;
+}
+
+.overlay-descrip-horizontal .table {
+	max-width: 320px;
 }
 
 
@@ -258,7 +274,7 @@ body {
 	padding-left: 0;
 }
 
-.overlay-buttons .btn {
+.overlay-vertical .overlay-buttons .btn {
 	min-width: 124px;
 }
 
@@ -283,25 +299,38 @@ body {
 	display: none;
 }
 
-.btn .help-tip {
-	right: 0px;
-	top: 1px;
-
-	line-height: 16px;
-	font-size: 12px;
-	border: 1px solid #333333;
-	width: 18px;
-	height: 18px;
-}
-
 input[type=radio] {
 	display: none;
 }
 
+
+.overlay-horizontal {
+	height: 100px;
+}
+
+.overlay-horizontal .overlay-title {
+	padding-top: 0px;
+}
+
+.overlay-horizontal .overlay-buttons .btn {
+	width: 110px;
+}
+
+.overlay-descrip-horizontal {
+	position: relative;
+	background-color: #333;
+	border-radius: 10px;
+	border: 1px solid #333;
+	padding: 5px 10px;
+	height: 290px
+}
+
+
+/*Input Row Stuff*/
 .input {
 	margin: 10px auto;
 	padding: 5px;
-	border: 1px solid black;
+	border: 1px solid #333;
 	width: 400px;
 	text-align: center;
 	position: relative;
@@ -320,6 +349,12 @@ input[type=radio] {
 	width: 500px;
 }
 
+@media (max-width: 520px) {
+	.input .help-tip  .helptip-main{
+		width: 300px;
+	}
+}
+
 .input .help-tip .helptip-main:after {
 	top: -10px;
 	height: 10px;
@@ -329,8 +364,6 @@ input[type=radio] {
 	height: 20px;
 	top: auto;
 }
-
-
 
 .slider-input {
 	height: 50px;
@@ -342,8 +375,6 @@ input[type=radio] {
 	margin-left: 20px;
 	color: #FFFFFF;
 	margin-top: -1px;
-/*	display: inline-block;
-	float: left;*/
 }
 
 #OmegaSlider{
@@ -376,21 +407,13 @@ input[type=radio] {
 	border-right-color: #FFFFFF;
 }
 
-.overlay-horizontal {
-	height: 100px;
-}
-
-.overlay-horizontal .overlay-title {
-	padding-top: 0px;
-}
-
-.overlay-horizontal .btn {
-	width: 110px;
-}
-
 @media (max-width: 430px) {
 	.input {
 		width: 300px;
+	}
+
+	.overlay-descrip-horizontal {
+		height: 310px
 	}
 	.slider-input table{
 		margin-right: 0px;
@@ -417,7 +440,7 @@ input[type=radio] {
 		font-size: 12px;
 	}
 
-	.overlay-horizontal .btn {
+	.overlay-horizontal .overlay-buttons .btn {
 		width: 95px;
 	}
 	.btn .help-tip {
@@ -430,11 +453,7 @@ input[type=radio] {
 	}
 }
 
-canvas {
-	cursor: move;
-}
-
-
+/*Lang-btn stuff*/
 .lang-group {
 	position: fixed;
 	bottom: 10px;
@@ -444,6 +463,10 @@ canvas {
 .dropup:not(.open) > .dropdown-toggle:focus:not(:hover) {
   background: white;
   border-color: #ccc;
+}
+
+.lang-btn {
+	text-decoration: none;
 }
 
 .lang-btn:hover {

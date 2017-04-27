@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="Describes the relationship between energy and the curvature of the universe">
+    <meta name="author"      content="Nicholas Mehrle">
+    <meta name="keywords"    content="Physics Visualization Cosmology Astronomy Geometry Curvature Universe Einstein General Relativity Space">
+
+    <title>Curvature of the Universe</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Custom Styling -->    
+    <link rel="stylesheet" type="text/css" href="css/help-tip.css">
+    <link rel="stylesheet" type="text/css" href="vendor/vis.min.css">
+    <link rel="stylesheet" type="text/css" href="css/curvature.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-slider.css">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="img/galaxy_clipart.png">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"> 
+          <h1 class="title text-center"> Curvature of the Universe </h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"> 
+          <div class="intro-underline"></div>
+          <div id="intro-paragraph" class="description-paragraph text-left"> 
+            <button class="minimize-btn btn" id="minimizeButton" type="button"> &ominus;</button> 
+            <p class="text-center description-main">This page is designed to illustrate the relationship between the energy density and curvature of the universe.</p>
+            <ul class="description-bullets">
+              <li> 
+                Use the slider labeled
+                <img class="inline-img" src="img/omega_explanation.png" title="Omega" alt="Omega"> 
+                to vary the energy density of the universe, and then observe how it's curvature changes. 
+              </li>
+              <li>
+                Use the overlay buttons to observe how the curvature affects different geometric properties. 
+              </li>
+              <li>
+                Hover over the <div class="mock-help-tip"></div> symbols to learn more about a specific topic. 
+              </li>
+              <li>
+                When you're done, click <a href="evolution.html">here</a> to learn how the universe evolves!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row body-row">
+        <div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12  vis-container"> 
+          <div class="vis-graph" id="surf-graph"> </div>
+          <div class="vis-graph" id="dot-graph"> </div>
+          <div class="vis-graph" id="line-graph"> </div>
+
+          <div class="help-tip">
+            <div class="helptip-main helptip-paginated main-frame-helptip">
+              <div class="helptip-content">
+                <p>
+                This frame depicts a two dimensional universe in three dimensional space. It models our own three-dimensional universe thought to exist inside a higher dimensional space.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                Although the universe bends into the third dimension, it remains a 2D surface. People travelling through it wouldn't notice moving in the third dimension. Sorf of like how when you move along the surface of the Earth, you don't notice the Earth's curvature!
+                </p>
+              </div>
+
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 2 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+
+            </div> 
+          </div>
+        </div>
+
+
+        <div class="col-md-3 hidden-xs hidden-sm">
+          <div class="overlay-vertical">
+
+            <div class="help-tip">
+              <div class="helptip-main helptip-paginated overlay-helptip">
+                <div class="helptip-content" id="">
+                  <p>
+                  Universes with curvature (<img class="" src="img/omega_neq_1_helptip.png" title="Omega =/= 1" alt="Omega =/= 1">) have strange and unfamiliar behavior for even basic geometric shapes. Click on the buttons below to overlay these shapes on your universe and learn how a curved universe changes their properties.
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p>
+                  This is because curved universes exhibit <span class='highlight'> non-euclidean geometry</span>. 
+                  When <img class="inline-img" src="img/omega_<_1_helptip.png" alt="Omega less than 1" title="Omega less than 1"> the universe exhibits hyperbolic geometry.
+                  For <img class='inline-img' src="img/omega_>_1_helptip.png" alt="Omega greater than 1" title="Omega greater than 1"> the universe exhibits elliptic geometry.
+                  </p>
+                </div>
+
+                <div class="page-controls text-center"> 
+                  <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                  <span> <span class="current-page"> 1 </span> / <span class="page-count"> 2 </span> </span>
+                  <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+                </div> 
+                
+              </div>
+            </div>
+
+            <div class="text-center overlay-title">
+              Overlays
+            </div>
+
+            <div class="text-center overlay-buttons">
+              <div class="btn-group-vertical" role="group">
+                <label class="btn overlay-button btn-default active">
+                  <p class="none-name">None</p>
+                  <input type="radio" name="overlay" value="0" checked>
+                </label>
+                <label class="btn overlay-button btn-default">
+                  <p class=" triangle-name">Triangle</p>
+                  <input type="radio" name="overlay" value="1">
+                </label>
+                <label class="btn overlay-button btn-default">
+                  <p class="parallel-name">Parallel Lines</p>
+                  <input type="radio" name="overlay" value="2">
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="overlay-vertical-container">
+            <div class="overlay-vertical overlay-descrip text-center overlay-triangle">
+              <p class="olay-descrip-title">
+                <span class="triangle-name">
+                  Triangle
+                </span>
+              </p>
+              <div class="olay-descrip-body">
+                <p class="triangle-descrip">
+                The sum of the angles in a triangle depends on the curvature of the universe, as below:
+                </p>
+                <table class="table table-condensed">
+                  <tr>
+                    <td class="flat-universe">
+                      Flat Universe
+                    </td>
+                    <td>
+                      <span class="highlight">= 180&deg;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="open-universe">
+                      Open Universe<br>(<img src="img/omega_<_1_box.png" alt="Omega less than 1" title="Omega less than 1">)
+                    </td>
+                    <td>
+                      <span class="highlight">&lt; 180&deg;</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="closed-universe">
+                      Closed Universe<br> (<img src="img/omega_>_1_box.png" alt="Omega greater than 1" title="Omega greater than 1">)
+                    </td>
+                    <td>
+                      <span class="highlight">&gt; 180&deg;</span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="olay-descrip-body olay-body-behind triangle-advanced">
+                By adding up the angles in a triangle, we can learn about the surface the triangle rests on. 
+                <br><br>
+                The radius of curvature (<img class='inline-img' src='img/R.png' title='R' alt='R'>) of a surface and its angles (<img class='inline-img' src='img/abc.png' title='a, b, c' alt='a, b, c'>) are related as:
+                <br>
+                <img src='img/triangle_relation.png' alt="a + b + c = pi +- A/R^2" title="a + b + c = pi +- A/R^2">
+                <br>
+                Where <img class='inline-img' src='img/A.png' title='A' alt='A'> is the area of the triangle. 
+              </div>
+
+              <button class="btn btn-default btn-advanced">
+                <span class="advanced-name">Advanced</span>
+                <span class="back-name hidden">Back</span>
+              </button>
+            </div>
+
+            <div class="overlay-vertical overlay-descrip text-center overlay-parallel">
+              <p class="olay-descrip-title">
+                <span class="parallel-name">
+                  Parallel Lines
+                </span>
+              </p>
+              <div class="olay-descrip-body">
+                <p class="parallel-descrip">
+                The behavior of parallel lines depends on the curvature of the universe, as below:
+                </p>
+                <table class="table table-condensed">
+                  <tr>
+                    <td class="flat-universe">
+                      Flat Universe
+                    </td>
+                    <td>
+                      <span class="highlight never-meet">Never Meet</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="open-universe">
+                      Open Universe <br>(<img src="img/omega_<_1_box.png" alt="Omega less than 1" title="Omega less than 1">)
+                    </td>
+                    <td>
+                      <span class="highlight curve-away">Curve Away</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="closed-universe">
+                      Closed Universe<br>(<img src="img/omega_>_1_box.png" alt="Omega greater than 1" title="Omega greater than 1">)
+                    </td>
+                    <td>
+                      <span class="highlight curve-toward">Curve Toward</span>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <div class="olay-descrip-body olay-body-behind parallel-advanced">
+                In curved universes, the shortest distance between two points is no longer a straight line, and is called a <a href="https://en.wikipedia.org/wiki/Geodesic">Geodesic</a>. For a sphere, which has positive curvature, the geodesic is a circle who shares a center with the sphere.
+                <br><br>
+                The notion of parallel lines is replaced by two geodesic lines which are parallel at a point
+              </div>
+
+              <button class="btn btn-default btn-advanced">
+                <span class="advanced-name">Advanced</span>
+                <span class="back-name hidden">Back</span>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="space-2"></div>
+
+      <div class="row">
+        <div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+          <div class="input slider-input"> 
+            <div class="help-tip helptip-up">
+              <div class="helptip-main helptip-paginated omega-helptip">
+                <div class="helptip-content">
+                  <p>
+                  The shape of the universe is determined by how much stuff (in the form of energy) is in it. We describe the amount of stuff by <img class="inline-img" src="img/omega_helptip.png" alt="Omega" title="Omega"> (Omega), known as the density parameter. More stuff (energy) means a larger value for <img class="inline-img" src="img/omega_helptip.png" alt="Omega" title="Omega">, and less stuff means a smaller value. The exact relationship is given by something called the <a href="https://en.wikipedia.org/wiki/Friedmann_equations"> Friedmann equations</a>.
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p>
+                  <img class="inline-img" src="img/omega_helptip.png" alt="Omega" title="Omega"> is defined as the ratio between the energy density (<img class="inline-img" src='img/epsilon_helptip.png' alt='epsilon' title='epsilon'>) of the universe and the critical energy density, <img class="" src='img/epsilon_c_helptip.png' alt='epsilon_c' title='epsilon_c'>, where <img class="" src='img/epsilon_c_helptip.png' alt='epsilon_c' title='epsilon_c'> is the exact amount of energy necessary to make the universe flat. 
+                  <br>
+                  <br>
+                  Thus, for <img class="inline-img" src='img/omega_=_1_helptip.png' alt='Omega = 1' title='Omega = 1'> the universe is flat!
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p>
+                  When <img class="img-bump" src='img/omega_>_1_helptip.png' alt='Omega > 1' title='Omega > 1'>, the universe is said to have positive curvature, or be closed. This is because in the absence of dark energy, this kind of universe will eventually collapse down on itself
+                  <br><br>
+                  When <img class="img-bump" src='img/omega_<_1_helptip.png' alt='Omega < 1' title='Omega < 1'>, the universe is said to have negative curvature, or be open. This kind of universe will expand forever even without dark energy.
+                  <br><br>
+                  Experiment with the evolution of the universe <a href='evolution.html'>here</a>
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p>
+                  So what is the value of <img class="inline-img" src="img/omega_helptip.png" alt="Omega" title="Omega"> in our universe?
+                  <br><br>
+                  According to the most recent (2015) results of the <a href='https://arxiv.org/abs/1502.01589'> Planck Survey</a>, <img class="inline-img" src="img/omega_helptip.png" alt="Omega" title="Omega"> is within 0.005 of 1. So we live in a flat universe!
+                  </p>
+                </div>
+
+                <div class="page-controls text-center"> 
+                  <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                  <span> <span class="current-page"> 1 </span> / <span class="page-count"> 4 </span> </span>
+                  <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+                </div> 
+              </div> 
+            </div>
+
+            <table center-block>
+              <tr>
+                <td> <label for="OmegaSlider"> <img class="inline-img" src="img/omega_big.png" title="Omega" alt="Omega"> </label> </td>
+                <td> <input type="range" id="OmegaSlider" min="0" max = "2" step="0.1" value ="1" oninput="omegaUpdate()" onchange=""> </td>
+                <td> <div><p id="OmegaVal"> 1 </p> </div></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="input overlay-horizontal hidden-md hidden-lg">
+        <div class="help-tip helptip-up">
+          <div class="helptip-main helptip-paginated overlay-helptip"> 
+            <div class="helptip-content" id="">
+                  <p>
+                  Universes with curvature (<img class="" src="img/omega_neq_1_helptip.png" title="Omega =/= 1" alt="Omega =/= 1">) have strange and unfamiliar behavior for even basic geometric shapes. Click on the buttons below to overlay these shapes on your universe and learn how a curved universe changes their properties.
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p>
+                  This is because curved universes exhibit <span class='highlight'> non-euclidean geometry</span>. 
+                  When <img class="inline-img" src="img/omega_<_1_helptip.png" alt="Omega less than 1" title="Omega less than 1"> the universe exhibits hyperbolic geometry.
+                  For <img class='inline-img' src="img/omega_>_1_helptip.png" alt="Omega greater than 1" title="Omega greater than 1"> the universe exhibits elliptic geometry.
+                  </p>
+                </div>
+
+                <div class="page-controls text-center"> 
+                  <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                  <span> <span class="current-page"> 1 </span> / <span class="page-count"> 2 </span> </span>
+                  <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+                </div> 
+          </div>
+        </div > 
+
+        <div class="text-center overlay-title">
+                Overlays
+        </div>
+
+        <div class="text-center overlay-buttons">
+          <div class="btn-group" role="group">
+            <label class="btn overlay-button btn-default active">
+              <p class="none-name">None</p>
+              <input type="radio" name="overlay" value="0" checked>
+            </label>
+            <label class="btn overlay-button btn-default">
+              <p class="triangle-name">Triangle</p> 
+              <input type="radio" name="overlay" value="1"> 
+            </label>
+            <label class="btn overlay-button btn-default">
+              <p class="parallel-name">Parallel Lines</p>
+              <input type="radio" name="overlay" value="2"> 
+            </label>
+          </div>
+        </div>
+
+         <div class="overlay-descrip overlay-descrip-horizontal text-center overlay-triangle">
+            <p class="olay-descrip-title">
+              <span class="triangle-name">
+                Triangle
+              </span>
+            </p>
+            <div class="olay-descrip-body">
+              <p class="triangle-descrip">
+              The sum of the angles in a triangle depends on the curvature of the universe, as below:
+              </p>
+              <table class="table table-condensed">
+                <tr>
+                  <td class="flat-universe">
+                    Flat Universe
+                  </td>
+                  <td>
+                    <span class="highlight">= 180&deg;</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="open-universe">
+                    Open Universe<br>(<img src="img/omega_<_1_box.png" alt="Omega less than 1" title="Omega less than 1">)
+                  </td>
+                  <td>
+                    <span class="highlight">&lt; 180&deg;</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="closed-universe">
+                    Closed Universe <br> (<img src="img/omega_>_1_box.png" alt="Omega greater than 1" title="Omega greater than 1">)
+                  </td>
+                  <td>
+                    <span class="highlight">&gt; 180&deg;</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="olay-descrip-body olay-body-behind triangle-advanced">
+              By adding up the angles in a triangle, we can learn about the surface the triangle rests on. 
+                <br><br>
+                The radius of curvature (<img class='inline-img' src='img/R.png' title='R' alt='R'>) of a surface and its angles (<img class='inline-img' src='img/abc.png' title='a, b, c' alt='a, b, c'>) are related as:
+                <br>
+                <img src='img/triangle_relation.png' alt="a + b + c = pi +- A/R^2" title="a + b + c = pi +- A/R^2">
+                <br>
+                Where <img class='inline-img' src='img/A.png' title='A' alt='A'> is the area of the triangle.  
+            </div>
+
+            <button class="btn btn-default btn-advanced">
+              <span class="advanced-name">Advanced</span>
+              <span class="back-name hidden">Back</span>
+            </button>
+          </div>
+
+          <div class="overlay-descrip overlay-descrip-horizontal text-center overlay-parallel">
+            <p class="olay-descrip-title">
+              <span class="parallel-name">
+                Parallel Lines
+              </span>
+            </p>
+            <div class="olay-descrip-body">
+              <p class="parallel-descrip">
+              The behavior of parallel lines depends on the curvature of the universe, as below:
+              </p>
+              <table class="table table-condensed">
+                <tr>
+                  <td class="flat-universe">
+                    Flat Universe
+                  </td>
+                  <td>
+                    <span class="highlight never-meet">Never Meet</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="open-universe">
+                    Open Universe<br>(<img src="img/omega_<_1_box.png" alt="Omega less than 1" title="Omega less than 1">)
+                  </td>
+                  <td>
+                    <span class="highlight curve-away">Curve Away</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="closed-universe">
+                    Closed Universe<br>(<img src="img/omega_>_1_box.png" alt="Omega greater than 1" title="Omega greater than 1">)
+                  </td>
+                  <td>
+                    <span class="highlight curve-toward">Curve Toward</span>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <button class="btn btn-default btn-advanced">
+              <span class="advanced-name">Advanced</span>
+              <span class="back-name hidden">Back</span>
+            </button>
+          </div>
+
+      </div> 
+
+      <!-- Single button -->
+      <div class="btn-group dropup lang-group">
+        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="active-language">English</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu additional-languages">
+        </ul>
+      </div>
+
+    </div>  
+  </body>
+  <!-- jQuery -->
+  <script src="vendor/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="vendor/bootstrap.min.js"></script>
+
+  <!-- <script type="text/javascript" src="/Users/nicholasmehrle/Documents/web/js/vis/dist/vis-graph3d.min.js"></script>  -->
+  <script type="text/javascript" src="scripts/loadtext.js"></script>
+  <script type="text/javascript" src="vendor/vis-graph3d.min.js"></script>  
+  <script type="text/javascript" src="scripts/curvature.js"></script>
+</html>

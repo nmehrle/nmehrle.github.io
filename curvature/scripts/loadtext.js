@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	var language = "en";
-
 	loadLanguages();
 });
 
@@ -30,21 +28,25 @@ function getJSONName() {
  	if (extIndex != -1) {
  	  filename = filename.substr(0,extIndex);
  	}
-	return filename+'.json';
+	return 'data/'+filename+'.json';
 }
 
 function interpretJSON(data,language) {
 	data = data[language];
 
+	document.title = data['title'];
+
 	$.each(data, function(key,value) {
 		if(Array.isArray(value)) {
-			var children = $('#'+key).children();
-			for (var i = 0; i < value.length; i++) {
-				$(children[i]).empty().append(value[i]);
-			}
+			$('.'+key).each(function() {
+				var children = $(this).children();
+				for (var i = 0; i < value.length; i++) {
+					$(children[i]).empty().append(value[i]);
+				}
+			});
 		}
 		else {
-			$("#"+key).text(value);
+			$("."+key).empty().append(value);
 		}
 	});
 }

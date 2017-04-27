@@ -650,11 +650,7 @@ $('.btn-advanced').click(function() {
       p.addClass('olay-body-behind')
     }
   }
-
-  if($(this).text().trim() == "Advanced") {
-    $(this).text("Back");
-  }
-  else {
-    $(this).text("Advanced");
-  }
+  $(this).children().each(function() {
+    $(this).toggleClass('hidden');
+  });
 });
