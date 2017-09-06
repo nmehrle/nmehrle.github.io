@@ -1,6 +1,6 @@
 .intro{
 	height: 90%; /*fallback if calc not supported */
-	height: calc(100% - 65px - 33px);
+	height: calc(100vh - 96px);
 	max-height: 800px;
 	min-height: 690px;
 }
@@ -29,9 +29,18 @@
 	margin: 0 auto;
 }
 
+#cont {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+#firstinfobar {
+	margin-top: 10px;
+}
+
 #backPic {
-	width: 60%;
-	height: 60%;
+	width: 80%;
+	height: 80%;
 	display: block;
 	border-radius: 50%;
 	background-color: #111;
