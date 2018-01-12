@@ -65,7 +65,7 @@ $(document).ready(function(){
 });
 
 $('.scroll-btn').click(function() {
-  let dest = $(window).height()/headerScale+40;
+  let dest = $('.main').position().top;
   $('html,body').animate({scrollTop: dest}, {duration: 600});
 
 });
