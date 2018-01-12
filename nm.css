@@ -1,0 +1,322 @@
+* {
+  -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*MISC*/
+  .outer-va {
+    display: table;
+    height: 100%;
+  }
+
+  .inline-outer-va {
+    display: inline-table;
+    height: 100%;
+  }
+
+  .inner-va {
+    display: table-cell;
+    vertical-align: middle;
+  }  
+/**/
+
+/*Buttons*/
+  .btn {
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  .btn-inner {
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: none;
+    border-radius: 10px;
+    font-size: 100%;
+    
+    /*DropDown Button*/
+    background: -webkit-linear-gradient(#111,#111);
+    background: -moz-linear-gradient(#111,#111);
+    background: -o-linear-gradient(#111,#111);
+    background: linear-gradient(#111,#111);
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% 200%;
+    -moz-background-size: 100% 200%;
+    background-size: 100% 200%;
+    cursor: pointer;
+  }
+
+  .btn-inner:hover {
+    /*Linear Transition*/
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+
+    color: #111;
+    background-position: 0 -102%
+  }
+/**/
+
+/*HEADER*/
+  .header{
+    position: fixed;
+
+    padding: 50px;
+    height: 100vh;
+
+    width: 100vw;
+    width: calc(100vw + 3px);
+    background-color: #111;
+    /*border-right: 3px solid #111;*/
+    text-align: center;
+
+    font-size: 48px;
+
+    z-index: 1;
+  }
+
+  .hdr-cont {
+    margin: 0 auto;
+    color: white;
+  }
+
+  .hdr-img {
+    width: 100%;
+
+    max-width: 400px;
+
+    border-radius: 50%;
+    border: 2px solid white;
+    background-color: white;
+  }
+
+  .hdr-intro-inner { 
+    display: inline-block;
+    position: relative;
+  }
+
+  .hdr-intro-inner > hr{
+    width: 380px;
+    margin: 5px auto 0;
+    height: 3px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+  }
+
+
+  .hdr-title {
+    margin-top: 15px;
+    font-size: 100%;
+  }
+
+  .hdr-subtitle {
+    margin-top: 5px;
+    font-size: 35px;
+  }
+
+  .hdr-btn-cont {
+    display: none;
+  }
+
+  .hdr-btn {
+    width: 100px;
+    height: 40px;
+    border: 3px solid white;
+
+    display: inline-block;
+
+    font-size: 18px;
+  }
+
+  .scroll-btn {
+    margin: 0 auto;
+
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+    border: 3px solid white;
+
+    font-size: 30px;
+  }
+
+  .scroll-btn > .btn-inner {
+    border-radius: 45%;
+  }
+/**/
+
+/*BODY*/
+  .main {
+    position: absolute;
+    top: 75vh;
+    margin-left: 150px;
+    min-height: 100vh;
+
+    width: calc(100vw - 150px);
+
+    z-index: 0;
+  }
+
+  /*Info Bars*/
+    .infobar {
+      min-height: 300px;
+      margin: 20px 0px;
+    }
+
+    .infobar > div {
+      display: inline-block;
+      min-height: 300px;
+    }
+
+    .infobar-right > div {
+      float: right;
+    }
+
+    .infobar-left > div {
+      float: left;
+    }
+
+    .infobar-img-cont {
+      width: 290px;
+      border-radius: 50%;
+    }
+
+    .infobar-img-cont > img {
+      margin: 20px 20px 20px 20px;
+      width: 250px;
+      height: 250px;
+      border-radius: 125px;
+      border: 2px solid #111;
+      background-color: #111;
+      z-index: 1;
+    }
+
+    .infobar-img-cont > a {
+      display: block;
+      width: 254px;
+      height: 254px;
+      position: absolute;
+      margin-left: 20px;
+      margin-top: 20px;
+      border-radius: 125px;
+      z-index: 0;
+    }
+
+    .infobar-body {
+      width: calc(100% - 290px);
+      margin-top: 10px;
+      padding: 10px 25px;
+      font-weight: 700;
+    }
+
+    .infobar-title {
+      font-size: 32px;
+      text-align: center;
+    }
+
+    .infobar-text {
+      margin-top: 20px;
+      line-height: 125%;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    .infobar-sep {
+      height: 4px;
+      width: 90%;
+      background-color: #111;
+    }
+  /**/
+
+  /*Footer*/
+    .footer {
+      text-align: center;
+    }
+
+    .footer-title {
+      margin-top: 30px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      margin: 20px 0;
+    }
+
+    .footer-btn{
+      height: 40px;
+      border: 3px solid #111;
+
+      display: inline-block;
+
+      font-size: 18px;
+    }
+
+    .footer-btn .btn-inner {
+      width: auto;
+      min-width: 100px;
+      position: relative;
+
+      padding: 0 20px;
+      vertical-align: top;
+    }
+
+    .btn-img {
+      height: 25px;
+      vertical-align: text-bottom;
+    }
+
+    .top-img {
+      position: absolute;
+      -webkit-transition: all .2s linear;
+      -moz-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+    }
+
+    .btn-img-text{
+      display: inline-block;
+      height: 25px;
+      vertical-align: text-top;
+    }
+
+    .btn-inner:hover .top-img {
+      opacity: 0;
+    }
+
+    .footer > hr{
+      width: 300px;
+      height: 4px; 
+      background-color: #111;
+    }
+
+    .last-update {
+      margin-top: 60px;
+    }
+  /**/
+/**/

@@ -2,206 +2,175 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="reset.css">
-	<link rel="stylesheet" type="text/css" href="common.css">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="shourtcut icon" href="pics/Venus.png">
-   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script type="text/javascript", src="script.js"></script>
-    <title>Nicholas Mehrle</title>
+  <link rel="stylesheet" type="text/css" href="nm.css">
+  <link rel="shortcut icon" href="img/venus.png">
+
+  <title>Nicholas Mehrle</title>
 </head>
+
 <body>
-	<div id="content">
-			<div class="menu" id="menuUnder"></div>
-			<div class="outer menu" >
-				<div class = "inner menuitem" id="menuName">
-					Nicholas Mehrle
-				</div>
-			</div>
+  <div class="container">
+    <div class="header">
+      <div class="hdr-cont">
+        <img class="hdr-img" src="img/nick.png">
 
-			<div style="height:96px;"></div>
+        <div class="hdr-intro-cont">
+          <div class="hdr-intro-inner">
+            <div class="hdr-title">
+              Nicholas Mehrle
+            </div>
+            <hr>
+            <div class="hdr-subtitle">
+              Astronomy Graduate Student 
+            </div>
+          </div>  
+        </div>
 
-		<div class="intro" id="introDiv">
-			
+        <div class="hdr-btn-cont">
+          <div class="btn hdr-btn">
+            <button id="about" class="btn-inner">
+              About
+            </button>
+          </div>
+          <div class="btn hdr-btn">
+            <button id="Research" class="btn-inner">
+              Research
+            </button>
+          </div>
+          <div class="btn hdr-btn">
+            <button id="projects" class="btn-inner">
+              Projects
+            </button>
+          </div>
+        </div>
 
-			<div id="mainImg">
-				<div id="imgCont">
-					<img src="pics/nick.png"  id="backPic">
-				</div>
-			</div>
-
-			<div  id="introWords"> 
-				<div id="introName">
-					Nicholas Mehrle
-				</div>
-
-				<div class="subtitle">
-					Friend of Animals
-				</div>
-			</div>
-
-			<div style="height:40px;"> </div>
-
-			<!-- <div class="learnMoreCont"> 
-				<a href="#Cont" class="linTrans dropDownBack learnMoreBlock"> Learn More </a>
-			</div>
- -->
-	 		<hr class="hrule" id="Cont">
-		</div>
-
-		<!-- For more right bars, copy from here -->
-
-		<div class ="infoBar" id="firstinfobar"> 
-			<div class="ibel ibimg left " >
-				<a href="http://web.mit.edu/physics/"></a>
-				<img src="pics/MIT_Seal.png">
-			</div>
-			
-			<div class= "ibel ibtxt right">
-
-					<div class="ibtitle"> Current </div>
-					<br>
-					<div class="ibdescripcont">
-						<div class="ibdescrip"> Nicholas is currently a 1st year graduate student at MIT, where he studies physics, specifically astronomy and astrophysics. He is currently interested in many topics, most notably exoplanets.
-						<br>
-						<br>
-						</div>
-					</div>
-			</div>
-		</div>
-		<!-- To Here -->
-		
+        <div class="scroll-btn-cont">
+          <div class="btn scroll-btn">
+            <button id="scroll-down" class="btn-inner">
+              &#8659;
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
 
 
-		<!-- For more left bars, copy from here -->
-		<hr class="hrule" >
+  <div class="main">
+    <hr class="infobar-sep">
 
-		<div class ="infoBar"> 
-			<div class="ibel ibimg right " >
-				<a href="http://www.jhu.edu"></a>
-				<img src="pics/jhu.jpg">
-			</div>
-			
-			<div class= "ibel ibtxt left">
+    <div class="infobar infobar-right">
+      <div class="infobar-img-cont">
+        <!-- <a href="#"></a> -->
+        <img src="img/mit.png">
+      </div>
+      <div class="infobar-body">
+        <div class="infobar-title">
+          Current
+        </div>
 
-					<div class="ibtitle"> Undergraduate </div>
-					<br>
-					<div class="ibdescripcont">
-						<div class="ibdescrip"> Nicholas graduated from Johns Hopkins University in May 2016 with an MA in Physics and Astronomy and a BS in Physics with additional majors in Mathematics and Applied Mathematics & Statistics.
-						<br>
-						</div>
-					</div>
+        <div class="infobar-text">
+          I am currently a first year graduate student at MIT studying astronomy. I am interested in the atmospheres of exoplanets and am working with Professor Ian Crossfield on high resolution ground based spectroscopic observations of exoplanet atmospheres.
+        </div>
+      </div>
+    </div>
 
-					<div style="height:20px;"> </div>
-					<div style="height:20px;"> </div>
+    <hr class="infobar-sep">
 
-			</div>
-		</div>
-		<!-- To Here -->
+    <div class="infobar infobar-left">
+      <div class="infobar-img-cont">
+        <!-- <a href="#"></a> -->
+        <img src="img/jhu.jpg">
+      </div>
+      <div class="infobar-body">
+        <div class="infobar-title">
+          Undergraduate
+        </div>
 
-		<!-- For more right bars, copy from here  -->
-		<hr class="hrule" id="Cont">
+        <div class="infobar-text">
+          Nicholas graduated from Johns Hopkins University in May 2016 with an MA in Physics and Astronomy and a BS in Physics with additional majors in Mathematics and Applied Mathematics & Statistics. 
+        </div>
+      </div>
+    </div>
 
-		<div class ="infoBar"> 
-			<div class="ibel ibimg left " >
-				<a href="http://admit.astro.umd.edu/AWE/Site/index.html"></a>
-				<img src="pics/UMD.png">
-			</div>
-			
-			<div class= "ibel ibtxt right">
+    <hr class="infobar-sep">
 
-					<div class="ibtitle"> Previous Work </div>
-					<br>
-					<div class="ibdescripcont">
-						<div class="ibdescrip"> Nicholas has had a number of jobs, most recently working for the University of Maryland's Astronomy Dept as a web developer for the Astronomy Workshop Extragalactic project. Before that he worked for Optiver as a derivatives market maker, and has had internships at CERN and the Johns Hopkins Applied Physics Laboratory. 
-						<br>
-						<br>
-						</div>
-					</div>
-			</div>
-		</div>
-		<!-- To Here -->
+    <div class="infobar infobar-right">
+      <div class="infobar-img-cont">
+        <!-- <a href="#"></a> -->
+        <img src="img/umd.png">
+      </div>
+      <div class="infobar-body">
+        <div class="infobar-title">
+          Previous Work
+        </div>
 
-		<!-- For more right bars, copy from here  -->
-		<hr class="hrule">
+        <div class="infobar-text">
+          Nicholas has had a number of jobs, most recently working for the University of Maryland's Astronomy Dept as a web developer for the Astronomy Workshop Extragalactic project. Before that he worked for Optiver as a derivatives market maker, and has had internships at CERN and the Johns Hopkins Applied Physics Laboratory. 
+        </div>
+      </div>
+    </div>
 
-		<div class ="infoBar"> 
-			<div class= "center">
+    <hr class="infobar-sep">
 
-					<div class="ibtitle"> Links </div>
-					<br>
-					<div class="ibdescripcont">
-						<div class="ibdescrip">
-						<div class="learnMoreCont"> 
-							<a href="NicholasMehrleCV.pdf" class="linTrans dropDownBack learnMoreBlock"> CV </a>
+    <div class="footer">
+      <div class="footer-title">
+        Links
+      </div>
 
-							<!-- <a href="NicholasMehrleTranscript.pdf" class="linTrans dropDownBack learnMoreBlock"> Transcript </a> -->
-						</div>
-						<br>
-						<div class="learnMoreCont"> 
-							<a href="http://arxiv.org/find/astro-ph/1/au:+Mehrle_N/0/1/0/all/0/1" class="linTrans dropDownBack learnMoreBlock"> arXiv page </a>	
-						</div>
-						<br>
-						<!-- <div class="center">
-							School Projects:
-						</div>
-						<br>
-						<div class="learnMoreCont"> 
-							<a href="MehrleThesis.pdf" class="linTrans dropDownBack learnMoreBlock"> Master's Thesis </a>
-						</div>
-						<br>
-						<div class="learnMoreCont"> 
-							<a href="greenhouse.html" class="linTrans dropDownBack learnMoreBlock"> Runaway Greenhouse Simulation </a>
-						</div>
-						<br>
-						<div class="learnMoreCont"> 
-							<a href="NicholasMehrleVIBE.pdf" class="linTrans dropDownBack learnMoreBlock"> Proposed Venus Mission </a>
-						</div> -->
-						</div>
-					</div>
-			</div>
-		</div>
-		<!-- To Here -->
+      <div class="footer-links">
 
-		<!-- <hr class="hrule"> -->
+        <a class="btn footer-btn" href="res/NicholasMehrleCV.pdf">
+          <button id="CV" class="btn-inner">
+            CV
+          </button>
+        </a>
 
-		<div id="footer" >
-			<div class="ibtitle"> Contact </div>
+        <a class="btn footer-btn" href="https://arxiv.org/find/astro-ph/1/au:+Mehrle_N/0/1/0/all/0/1">
+          <button id="arXiv" class="btn-inner">
+            arXiv
+          </button>
+        </a>
 
-			<div style="height:30px;"></div>
+      </div>
+      <hr>
 
-			<div id="footerel">
+      <div class="footer-title">
+        Contact
+      </div>
 
-				<!--<a class="linTrans dropDownBack contact" href="https://www.github.com/nmehrle"> 
-					<img class="gitPic blackBack linTrans topPic footerPic" src="pics/GitHubWhite.png"> 
-					<img class="gitPic whiteBack botPic footerPic" src="pics/GitHubBlack.png"> 
-					<span class="footText" id="gitText"> GitHub  </span>
-				</a>
+      <div class="footer-links">
+        <a class="btn footer-btn" href="https://github.com/nmehrle">
+          <button id="github" class="btn-inner">
+            <img class="btn-img top-img" src="img/links/githubwhite.png">  
+            <img class="btn-img bot-img" src="img/links/githubblack.png">
+            <div class="btn-img-text">Github</div>
+          </button>
+        </a>
 
-				<div class=" footSep"></div>
-				-->
+        <a class="btn footer-btn" href="mailto:nmehrle@gmail.com">
+          <button id="email" class="btn-inner">
+            nmehrle@gmail.com
+          </button>
+        </a>
 
-				<a class="linTrans dropDownBack contact" href="mailto:nmehrle@gmail.com"> 
-					<!--<img class="whiteBack linTrans topPic footerPic" src="pics/emailblack.png"> 
-					<img class="blackBack botPic footerPic" src="pics/emailwhite.png"> -->
-					<span class="footText" id="emailText"> nmehrle@gmail.com  </span>
-				</a> 
-				<br>
+        <a class="btn footer-btn" href="https://www.linkedin.com/in/nicholas-mehrle-7906b961/">
+          <button id="linkedIn" class="btn-inner">
+            <img class="btn-img top-img" src="img/links/linkedinwhite.png">
+            <img class="btn-img bot-img" src="img/links/linkedinblack.png">
+          </button>
+        </a>
+      </div>
 
-				<div class=" footSep"></div>
+      <div class="last-update">
+        Last Updated 1/12/18
+      </div>
+    </div>    
+    
+  </div>
 
-				<a class="linTrans dropDownBack contact" href="https://www.linkedin.com/in/nicholas-mehrle-7906b961">
-					<img class="topPic linTrans footerPic" src="pics/LinkedInWhite.png">
-					<img class="botPic footerPic" src="pics/LinkedInBlack.png">
-					<span class="footText" id="linkedInText"></span>
-				</a>
 
-			</div>
-			<div style="height:30px;"></div>
-			<div id="lastUpdate"> Last Updated Sep 3, 2017 </div>
-
-		</div>
-
-	</div>
+  <script type="text/javascript" src="script/jquery.min.js"></script>
+  <script type="text/javascript" src="script/nm.js"></script>
 </body>
+
 </html>

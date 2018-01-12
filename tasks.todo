@@ -1,0 +1,21 @@
+ General:
+   ☐ Parallax
+     planets?
+   
+   ☐ mobile friendly
+   ☐ menu links
+
+
+   ☐ move header on scroll
+   header:
+     ✔ set width and padding @done (17-11-25 21:24)
+       use outerWidth
+     ☐ fix aspect ratio
+     ✔ way to not doubleset values in js/css @done (17-11-26 15:50)
+       js array of values
+       css still should set initial values to not have jumps
+     ✔ not set so many variables in partil fun @done (17-11-26 15:51)
+     ☐ text doesn't overlap hdr on way up
+     ✘ copy scroll effect @cancelled (17-11-26 15:51)
+       unnecessary
+     ☐ content starts (ENDHEIGHT) below header??
