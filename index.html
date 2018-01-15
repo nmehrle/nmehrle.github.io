@@ -16,37 +16,39 @@
 
         <div class="hdr-intro-cont">
           <div class="hdr-intro-inner">
-            <div class="hdr-title">
-              Nicholas Mehrle
+            <div class="hdr-titles-cont">
+              <div class="hdr-title">
+                Nicholas Mehrle
+              </div>
+              <div class="hdr-subtitle">
+                Astronomy Graduate Student 
+              </div>
             </div>
             <hr>
-            <div class="hdr-subtitle">
-              Astronomy Graduate Student 
+            <div class="hdr-btn-cont">
+              <div class="btn hdr-link-btn hdr-btn">
+                <button id="about-btn" class="btn-inner">
+                  About
+                </button>
+              </div>
+              <div class="btn hdr-link-btn hdr-btn">
+                <button id="research-btn" class="btn-inner">
+                  Research
+                </button>
+              </div>
+              <!-- <div class="btn hdr-link-btn hdr-btn">
+                <button id="project-btn" class="btn-inner">
+                  Projects
+                </button>
+              </div> -->
             </div>
           </div>  
         </div>
 
-        <div class="hdr-btn-cont">
-          <div class="btn hdr-btn">
-            <button id="about" class="btn-inner">
-              About
-            </button>
-          </div>
-          <div class="btn hdr-btn">
-            <button id="Research" class="btn-inner">
-              Research
-            </button>
-          </div>
-          <div class="btn hdr-btn">
-            <button id="projects" class="btn-inner">
-              Projects
-            </button>
-          </div>
-        </div>
 
         <div class="scroll-btn-cont">
-          <div class="btn scroll-btn">
-            <button id="scroll-down" class="btn-inner">
+          <div class="btn scroll-btn hdr-btn">
+            <button id="scroll-down-btn" class="btn-inner">
               &#8659;
             </button>
           </div>
@@ -58,81 +60,91 @@
   <div class="main">
     <hr class="infobar-sep">
 
-    <div class="infobar infobar-right">
+    <div id="about-bar" class="infobar infobar-right">
       <div class="infobar-img-cont">
         <!-- <a href="#"></a> -->
         <img src="img/mit.png">
       </div>
       <div class="infobar-body">
         <div class="infobar-title">
-          Current
+          About
         </div>
 
         <div class="infobar-text">
-          I am currently a first year graduate student at MIT studying astronomy. I am interested in the atmospheres of exoplanets and am working with Professor Ian Crossfield on high resolution ground based spectroscopic observations of exoplanet atmospheres.
+          I am a first year graduate student studying 
+          <a href="http://space.mit.edu/">astronomy at MIT</a>
+          working with 
+          <a href="https://people.ucsc.edu/~ianc/">Professor Ian Crossfield</a>
+          on characterizing exoplanet atmospheres through ground based spectroscopy. 
+        </div>
+        <div class="infobar-btn-cont">
+          <a class="btn footer-btn" href="res/NicholasMehrleCV.pdf">
+            <button id="CV" class="btn-inner">
+              CV
+            </button>
+          </a>
         </div>
       </div>
     </div>
 
     <hr class="infobar-sep">
 
-    <div class="infobar infobar-left">
+    <div id="research-bar" class="infobar infobar-left">
       <div class="infobar-img-cont">
         <!-- <a href="#"></a> -->
-        <img src="img/jhu.jpg">
+        <img src="img/mmt.jpg">
       </div>
       <div class="infobar-body">
         <div class="infobar-title">
-          Undergraduate
+          Research
         </div>
 
         <div class="infobar-text">
-          Nicholas graduated from Johns Hopkins University in May 2016 with an MA in Physics and Astronomy and a BS in Physics with additional majors in Mathematics and Applied Mathematics & Statistics. 
+          I am currently working on analyzing the atmospheric composition of 
+          <a href="https://en.wikipedia.org/wiki/Upsilon_Andromedae_b"> Upsilon Andromedae b</a>
+          using data from the 
+          <a href="https://www.mmto.org/node/62"> Aries spectrograph at the MMT Observatory </a>
+        </div>
+        <div class="infobar-btn-cont">
+          <a class="btn footer-btn" href="https://arxiv.org/find/astro-ph/1/au:+Mehrle_N/0/1/0/all/0/1">
+            <button id="arXiv" class="btn-inner">
+              arXiv
+            </button>
+          </a>  
         </div>
       </div>
     </div>
 
     <hr class="infobar-sep">
 
-    <div class="infobar infobar-right">
+   <!--  <div id='project-bar' class="infobar infobar-right">
       <div class="infobar-img-cont">
-        <!-- <a href="#"></a> -->
-        <img src="img/umd.png">
+        <img src="img/nick.png">
       </div>
       <div class="infobar-body">
         <div class="infobar-title">
-          Previous Work
+          Projects
         </div>
 
         <div class="infobar-text">
-          Nicholas has had a number of jobs, most recently working for the University of Maryland's Astronomy Dept as a web developer for the Astronomy Workshop Extragalactic project. Before that he worked for Optiver as a derivatives market maker, and has had internships at CERN and the Johns Hopkins Applied Physics Laboratory. 
+          Projects I have been involved in through school, clients, or personal interest.      
+        </div>
+
+        <div class="infobar-btn-cont">
+
+          <div class="btn footer-btn" href="">
+            <button id="" class="btn-inner">
+              blah
+            </button>
+          </div>
+
         </div>
       </div>
     </div>
 
-    <hr class="infobar-sep">
+    <hr class="infobar-sep"> -->
 
     <div class="footer">
-      <div class="footer-title">
-        Links
-      </div>
-
-      <div class="footer-links">
-
-        <a class="btn footer-btn" href="res/NicholasMehrleCV.pdf">
-          <button id="CV" class="btn-inner">
-            CV
-          </button>
-        </a>
-
-        <a class="btn footer-btn" href="https://arxiv.org/find/astro-ph/1/au:+Mehrle_N/0/1/0/all/0/1">
-          <button id="arXiv" class="btn-inner">
-            arXiv
-          </button>
-        </a>
-
-      </div>
-      <hr>
 
       <div class="footer-title">
         Contact
@@ -162,7 +174,7 @@
       </div>
 
       <div class="last-update">
-        Last Updated 1/12/18
+        Last Updated 1/15/18
       </div>
     </div>    
     

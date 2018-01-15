@@ -1,7 +1,15 @@
 * {
   -webkit-box-sizing: border-box;
-         -moz-box-sizing: border-box;
-              box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --header-text-color: white;
+  --btn-bg-color: #111;
+  --btn-accent-color: white;
+
+  --accent-color: #185CA5;
 }
 
 body {
@@ -29,7 +37,7 @@ body {
 
 /*Buttons*/
   .btn {
-    background-color: white;
+    background-color: var(--btn-accent-color);
     position: relative;
     border-radius: 20px;
 
@@ -44,8 +52,8 @@ body {
   }
 
   .btn-inner {
-    color: white;
-    height: 100%;
+    color: var(--btn-accent-color);
+    height: 102%;
     width: 100%;
     display: inline-block;
 
@@ -58,10 +66,10 @@ body {
     font-size: 100%;
     
     /*DropDown Button*/
-    background: -webkit-linear-gradient(#111,#111);
-    background: -moz-linear-gradient(#111,#111);
-    background: -o-linear-gradient(#111,#111);
-    background: linear-gradient(#111,#111);
+    background: -webkit-linear-gradient( var(--btn-bg-color), var(--btn-bg-color));
+    background: -moz-linear-gradient(  var(--btn-bg-color), var(--btn-bg-color));
+    background: -o-linear-gradient(  var(--btn-bg-color), var(--btn-bg-color));
+    background: linear-gradient(  var(--btn-bg-color), var(--btn-bg-color));
     background-repeat: no-repeat;
     -webkit-background-size: 100% 200%;
     -moz-background-size: 100% 200%;
@@ -76,80 +84,95 @@ body {
     -o-transition: all .2s linear;
     transition: all .2s linear;
 
-    color: #111;
+    color: var(--btn-bg-color);
     background-position: 0 -102%
   }
 /**/
 
 /*HEADER*/
   .header{
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+
     position: fixed;
 
-    padding: 50px;
     height: 100vh;
 
     width: 100vw;
     width: calc(100vw + 3px);
-    background-color: #111;
-    /*border-right: 3px solid #111;*/
+    border-right: 3px solid #111;
     text-align: center;
-
     font-size: 48px;
-
     z-index: 1;
+
+    /*background-color: var(--accent-color);*/
+    background-image: url("img/space_bg_me.jpeg");
+    /*background-image: url("img/space_bg.jpeg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   .hdr-cont {
     margin: 0 auto;
-    color: white;
+    color: var(--header-text-color);
   }
 
   .hdr-img {
+    margin-top: 10px;
     width: 100%;
-
-    max-width: 400px;
+    max-width: 300px;
 
     border-radius: 50%;
-    border: 2px solid white;
-    background-color: white;
+
+    border: 2px solid var(--header-text-color);
+    background-color: var(--header-text-color);
   }
 
   .hdr-intro-inner { 
     display: inline-block;
     position: relative;
+
+    background-color: rgba(50,50,50,0.5);
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
   }
 
-  .hdr-intro-inner > hr{
-    width: 380px;
+  .hdr-intro-cont hr{
+    max-width: 380px;
     margin: 5px auto 0;
     height: 3px;
     border: none;
     border-radius: 2px;
-    background-color: white;
+    background-color: var(--header-text-color);
   }
 
 
   .hdr-title {
-    margin-top: 15px;
+    margin-top: 5px;
     font-size: 100%;
   }
 
   .hdr-subtitle {
-    margin-top: 5px;
     font-size: 35px;
   }
 
   .hdr-btn-cont {
-    display: none;
+    margin-top: 10px;
   }
 
   .hdr-btn {
+    border: 3px solid var(--header-text-color);
+    overflow: hidden;
+  }
+
+  .hdr-link-btn {
     width: 100px;
     height: 40px;
-    border: 3px solid white;
 
     display: inline-block;
-
     font-size: 18px;
   }
 
@@ -160,13 +183,7 @@ body {
     width: 60px;
     border-radius: 50%;
 
-    border: 3px solid white;
-
     font-size: 30px;
-  }
-
-  .scroll-btn > .btn-inner {
-    border-radius: 45%;
   }
 /**/
 
@@ -230,6 +247,7 @@ body {
     .infobar-body {
       width: calc(100% - 290px);
       margin-top: 10px;
+      margin-bottom: 20px;
       padding: 10px 25px;
       font-weight: 700;
     }
@@ -246,6 +264,20 @@ body {
       text-align: left;
     }
 
+    .infobar-text a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .infobar-text a:hover {
+      text-decoration: underline;
+    }
+
+    .infobar-btn-cont {
+      text-align: center;
+      margin-top: 20px;
+    }
+
     .infobar-sep {
       height: 4px;
       width: 90%;
@@ -259,7 +291,7 @@ body {
     }
 
     .footer-title {
-      margin-top: 30px;
+      margin-top: 20px;
       font-size: 32px;
       font-weight: 700;
     }

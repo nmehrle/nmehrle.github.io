@@ -1,43 +1,49 @@
 var headerValues = {
   ".header": {
-    "padding": {
-      start: 50,
-      end: 5
-    },
-
     "width": {
       start: 0,
       end: 150 
     },
-
     "font-size": {
       start: 48,
       end: 30
     }
   },
+  ".hdr-intro-inner": {
+    "padding-left": {
+      start: 15,
+      end: 5
+    },
+    "padding-right": {
+      start: 15,
+      end: 5
+    }
+  },
   ".hdr-subtitle": {
     "font-size": {
       start:35,
-      end:18
+      end:17
     }
   },
   ".hdr-title": {
     "margin-top":{
-      start: 15,
-      end: -5
+      start: 5,
+      end: 0
     }
   },
-  ".hdr-intro-inner > hr": {
+  ".hdr-img": {
     "width": {
-      start: 380,
-      end: 130
-    },
+      start: 300,
+      end: 145
+    }
+  },
+  ".hdr-intro-cont hr": {
     "height": {
       start: 3,
       end: 2
     }
   },
-  ".hdr-btn": {
+  ".hdr-link-btn": {
     "width": {
       start: 100,
       end: 85
@@ -64,10 +70,21 @@ $(document).ready(function(){
   initialize();
 });
 
-$('.scroll-btn').click(function() {
+$('#scroll-down-btn').click(function() {
   let dest = $('.main').position().top;
   $('html,body').animate({scrollTop: dest}, {duration: 600});
-
+});
+$('#about-btn').click(function() {
+  let dest = $('#about-bar').position().top + $('.main').position().top;
+  $('html,body').animate({scrollTop: dest}, {duration: 600});
+});
+$('#research-btn').click(function() {
+  let dest = $('#research-bar').position().top + $('.main').position().top;
+  $('html,body').animate({scrollTop: dest}, {duration: 600});
+});
+$('#project-btn').click(function() {
+  let dest = $('#project-bar').position().top + $('.main').position().top;
+  $('html,body').animate({scrollTop: dest}, {duration: 600});
 });
 
 function initialize() {
