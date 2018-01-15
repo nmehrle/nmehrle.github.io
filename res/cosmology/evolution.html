@@ -1,0 +1,427 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  	<meta name="description" content="">
+  	<meta name="author"       content="Nicholas Mehrle">
+  	<meta name="keywords"     content="">
+
+  	<title>Evolution of the Universe</title>
+
+  	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- Custom Styling --> 
+    <link rel="stylesheet" type="text/css" href="vendor/vis.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/nv.d3.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/help-tip.css">
+  	<link rel="stylesheet" type="text/css" href="css/custom-slider.css">
+
+    <link rel="stylesheet" type="text/css" href="css/evolution.css">
+
+    <link rel="shourtcut icon" href="img/galaxy_clipart.png">
+	</head>
+  <body>
+    <div class="container-fluid" id="main">
+
+      <div class="row">
+        <h1 class="title text-center"> Evolution of the Universe </h1>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-sm-10 col-sm-offset-1 col-xs-12"> 
+          <div class="intro-underline"></div>
+          <div id="intro-paragraph" class="description-paragraph text-left"> 
+            <button class="minimize-btn btn" id="minimizeButton" type="button"> &ominus;</button> 
+            <p class="text-center description-main">This page is designed to illustrate the relationship between the energy content and evolution of the universe, and explain the concept of the <a href="https://en.wikipedia.org/wiki/Ultimate_fate_of_the_Universe">Ultimate Fate of the Universe</a>.</p>
+            <ul class="description-bullets">
+              <li> 
+                Adjust the sliders below and observe how they affect the universe's evolution as shown in the line graph.
+              </li>
+              <li>
+                Watch the universe evolve in the animation panel.
+              </li>
+              <li>
+                Use the button panel to jump to certain pre-set scenarios. The Benchmark scenario is the best estimate for our universe!
+              </li>
+              <li>
+                Hover over the <div class="mock-help-tip"></div> symbols to learn more about a specific topic. 
+              </li>
+              <li>
+                This assumes that you're familiar with the energy density concept described <a href="curvature.html">here</a>, in the tooltip next to the slider.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row graphs-container">
+        <div class="col-md-5 col-xs-6 col-md-offset-1 graph disp-grp-1" id="Line-Graph">
+          <div class="help-tip helptip-chart">
+            <div class="helptip-main helptip-paginated full-page-helptip main-helptip-chart">
+              <div class="helptip-content">
+                <p>
+                  This panel depicts a graph of the size of the universe versus time. Change the selected series by using the sliders below, and click Add to add a new series.
+                  <br><br>
+                  Click the 'Animate' button to switch to an animation of how this universe evolves.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                  The size of the universe is described by a unitless value called the <a href="https://en.wikipedia.org/wiki/Scale_factor_(cosmology)">Scale Factor</a>. This is used because the absolute size of the universe is unknown! A scale factor of 1 corresponds to the current size of the universe. For reference, the current <a href="https://en.wikipedia.org/wiki/Observable_universe">Observable Universe</a> is roughly 93 billion light-years (5.5 x 10<sup>23</sup> miles) in diameter.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                  The evolution of the universe is entirely determined by the amount and type of stuff (energy) it contains at present. It can be described by the <a href="https://en.wikipedia.org/wiki/Friedmann_equations">Friedmann Equations</a>. <div style="height: 30px;"></div>
+                </p>
+              </div> 
+
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 3 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+            </div>
+          </div>
+          <button class="view-btn btn btn-xs disp-grp-1" id="view-animation-btn" type="button"> <span class="animate">Animate</span> </button>
+          <button class="new-series-btn btn btn-xs" id="new-series-btn" type="button"> <span>&oplus;</span><span class="add" id="new-series"> Add</span></button> 
+          <svg class="full-size"> </svg>
+        </div>
+        <div class="graph-divider"> </div>
+        <div class="col-md-5 col-xs-6 graph disp-grp-2 vis-container">
+          <button class="view-btn btn btn-xs disp-grp-2" id="view-chart-btn" type="button"> <span class="view-chart">View Chart</span> </button>
+          <div class="full-size absolute" id="Surface-Graph"> </div>
+          <div class="full-size absolute" id="Dot-Graph"> </div>
+          <div class="help-tip helptip-dual-panel">
+            <div class="helptip-main helptip-paginated full-page-helptip main-helptip-dual">
+              <div class="helptip-content">
+                <p>
+                These panels are meant to visualize how the universe will evolve under the conditions described by the sliders below. 
+
+                <div class="row helptip-division">
+                  <div class="col-xs-6">
+                    The panel on the left depicts a graph of the size of the universe versus time. Change the selected series by using the sliders below, and click Add to add a new series.
+                  </div>
+                  <div class="col-xs-6">
+                    The panel on the right depicts an animation of the universe evolving, with a few galaxies added for illustration. Note, the galaxies are not depicted to scale with the entire universe.
+                  </div>
+                </div>
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <div class="row helptip-division">
+                  <div class="col-xs-6">
+                    The size of the universe is described by a unitless value called the <a href="https://en.wikipedia.org/wiki/Scale_factor_(cosmology)">Scale Factor</a>. This is used because the absolute size of the universe is unknown! A scale factor of 1 corresponds to the current size of the universe. For reference, the current <a href="https://en.wikipedia.org/wiki/Observable_universe">Observable Universe</a> is roughly 93 billion light-years (5.5 x 10<sup>23</sup> miles) in diameter.
+                  </div>
+                  <div class="col-xs-6">
+                    The galaxies shown in the universe should stay the same size for the entire evolution of the universe. Although space may be expanding, the self-gravity of these galaxies keeps them at the same size, while the distance between them increases. The size change shown here is a result of the blown up scale used for visualization.
+                  </div>
+                </div>
+              </div>
+
+            <div class="helptip-content helptip-behind">
+                <p>
+                  The evolution of the universe is entirely determined by the amount and type of stuff (energy) it contains at present. It can be described by the <a href="https://en.wikipedia.org/wiki/Friedmann_equations">Friedmann Equations</a>.<div style="height: 90px;"></div>
+                </p>
+              </div> 
+
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 3 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+            </div>
+          </div>
+          <div class="help-tip helptip-animation">
+            <div class="helptip-main helptip-paginated full-page-helptip main-helptip-animation">
+              
+              <div class="helptip-content">
+                <p>
+                  This panel depicts an animation of the universe evolving, with a few galaxies added for illustration. Note, the galaxies are not depicted to scale with the entire universe.
+                  <br><br>
+                  Click the 'View Chart' button to return to a graph of the size of the universe versus time.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                  The galaxies shown in the universe should stay the same size for the entire evolution of the universe. Although space may be expanding, the self-gravity of these galaxies keeps them at the same size, while the distance between them increases. The size change shown here is a result of the blown up scale used for visualization.
+                </p>
+              </div>
+              
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 2 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row component-input-container">
+
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12">
+          <div class="row">
+            <div class="col-xs-4 component-input">
+              <h3 class="radiation">Radiation</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_r.png" title="Omega r" alt="Omega r"></td>
+                <td>
+                  <input type="range" class="input-slider" id="radiationSlider" min="0" max = "2" step="0.01" value = "0">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Rad-Val"> 0.0 </p>
+                </td>
+                </tr>
+              </table>
+              <div class="help-tip helptip-up helptip-small">
+                <div class="helptip-small-chevron">
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-4 component-input">
+              <h3 class="matter">Matter</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_m.png" title="Omega m" alt="Omega m"></td>
+                <td>
+                  <input type="range" class="input-slider" id="matterSlider" min="0" max = "2" step="0.01" value = "0.3">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Mat-Val"> 0.3 </p>
+                </td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-xs-4 component-input">
+              <h3 class="dark-energy">Dark Energy</h3>
+              <table>
+                <tr>
+                <td><img src="img/omega_l.png" title="Omega Lambda" alt="Omega Lambda"></td>
+                <td>
+                  <input type="range" class="input-slider" id="lambdaSlider" min="0" max = "2" step = "0.01" value = "0.7">
+                </td>
+                <td class="input-value-display">
+                  <div class="tri-left"></div>
+                  <p id="Lam-Val"> 0.7 </p>
+                </td>
+                </tr>
+              </table>
+            </div>
+            <div class="help-tip helptip-up helptip-large">
+              <div class="helptip-main helptip-paginated full-page-helptip input-helptip slider-helptip">
+                <div class="helptip-content">
+                  <p>
+                  This panel allows you to manipulate the amounts three distinct types of stuff (energy) in your toy universe. Play with the sliders and observe how the universe's evolution changes. 
+                  <br><br>
+                  Remember, each type of energy is described in units of the critical energy density, and the sum of all forms of energy dictates the curvature of the universe (as described <a href="curvature.html">here</a>).
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <div class="row helptip-division">
+                    <div class="col-xs-4 text-justify radiation-description">
+                      Radiation describes all the energy in the universe in the form of light (photons). Most of this energy is in the <a href="https://en.wikipedia.org/wiki/Cosmic_microwave_background">Cosmic Microwave Background</a>, an all present low energy field of microwave energy. It won't cook your food, but you can see it on the static on an old TV.
+                    </div>
+                    <div class="col-xs-4 matter-description">
+                      Matter is all the energy in the universe that has mass. This consists of two parts: first, all the stuff you usually consider matter, most of which is <a href="https://en.wikipedia.org/wiki/Baryon#Baryonic_matter">Baryonic Matter</a>, and second, a mysterious form which doesn't interact with light, called <a href="https://en.wikipedia.org/wiki/Dark_matter">Dark Matter</a>. Most matter in our universe is dark.
+                    </div>                      
+                    <div class="col-xs-4 darkeng-description">
+                      <a href="https://en.wikipedia.org/wiki/Dark_energy">Dark Energy</a> is a hypothesized form of energy about which almost nothing is known except that it causes the universe to expand at an accelerating rate. We only know of it through its effect on the expansion rate of the universe, which we have measured.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p class="energy-description">
+                    Different forms of energy are described mathematically by their <a href="https://en.wikipedia.org/wiki/Equation_of_state_(cosmology)">Equation of State</a>, and in particular, the equation of state parameter, <img src="img/little_omega.png" alt="w" title="w">. The value of <img src="img/little_omega.png" alt="w" title="w"> dictates the effect a particular kind of energy has on the evolution of the universe, and when in the universe's history that kind of energy dominates the evolution. For each kind of energy, the equation of state paramter, <img src="img/little_omega.png" alt="w" title="w">, and relation between scale factor (<img src="img/math_a.png" alt="a" title="a">), and time (<img class="inline-img" src="img/math_t.png" alt="t" title="t">) when that energy dominates in a flat universe are:
+                  </p>
+                  <div class="row helptip-division">
+                    <div class="col-xs-4 text-center">
+                      <span class="matter">Matter</span>
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/matter_rel.png">
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <span class="radiation">Radiation</span>
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/rad_rel.png">
+                    </div>                      
+                    <div class="col-xs-4 text-center">
+                      <span class="dark-energy">Dark Energy</span><span class="superscript">*</span>
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/darkeng_rel.png">
+                    </div>
+                  </div>
+                  <p class="darkeng-subtext"> 
+                    <span class="superscript">*</span>This represents only the most commonly considered form of dark energy. Technically anything within <img src="img/darkeng_range.png" alt="-1 < w < -1/3" title="-1 < w < -1/3"> is considered dark energy.
+                  </p>
+                </div>
+
+                <div class="page-controls text-center"> 
+                  <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                  <span> <span class="current-page"> 1 </span> / <span class="page-count"> 3 </span> </span>
+                  <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="helptip-small-main helptip-paginated slider-helptip">
+                <div class="helptip-content ">
+                  <p>
+                  This panel allows you to manipulate the amounts three distinct types of stuff (energy) in your toy universe. Play with the sliders and observe how the universe's evolution changes. 
+                  <br><br>
+                  Remember, each type of energy is described in units of the critical energy density, and the sum of all forms of energy dictates the curvature of the universe (as described <a href="curvature.html">here</a>).
+                  </p>
+                </div>
+
+                <div class="helptip-content helptip-behind radiation-description">
+                  Radiation describes all the energy in the universe in the form of light (photons). Most of this energy is in the <a href="https://en.wikipedia.org/wiki/Cosmic_microwave_background">Cosmic Microwave Background</a>, an all present low energy field of microwave energy. It won't cook your food, but you can see it on the static on an old TV.
+                </div>
+                <div class="helptip-content helptip-behind matter-description">
+                  Matter is all the energy in the universe that has mass. This consists of two parts: first, all the stuff you usually consider matter, most of which is <a href="https://en.wikipedia.org/wiki/Baryon#Baryonic_matter">Baryonic Matter</a>, and second, a mysterious form which doesn't interact with light, called <a href="https://en.wikipedia.org/wiki/Dark_matter">Dark Matter</a>. Most matter in our universe is dark.
+                </div>
+                <div class="helptip-content helptip-behind darkeng-description">
+                  <a href="https://en.wikipedia.org/wiki/Dark_energy">Dark Energy</a> is a hypothesized form of energy about which almost nothing is known except that it causes the universe to expand at an accelerating rate. We only know of it through its effect on the expansion rate of the universe, which we have measured.
+                </div>
+
+                <div class="helptip-content helptip-behind">
+                  <p class="energy-description">
+                  Different forms of energy are described mathematically by their <a href="https://en.wikipedia.org/wiki/Equation_of_state_(cosmology)">Equation of State</a>, and in particular, the equation of state parameter, <img src="img/little_omega.png" alt="w" title="w">. The value of <img src="img/little_omega.png" alt="w" title="w"> dictates the effect a particular kind of energy has on the evolution of the universe, and when in the universe's history that kind of energy dominates the evolution. For each kind of energy, the equation of state paramter, <img src="img/little_omega.png" alt="w" title="w">, and relation between scale factor (<img src="img/math_a.png" alt="a" title="a">), and time (<img class="inline-img" src="img/math_t.png" alt="t" title="t">) when that energy dominates in a flat universe are:
+                </p>
+                <br><br>  
+                  <div class="row helptip-division">
+                    <div class="col-xs-4 text-center">
+                      <span class="matter">Matter</span> 
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/matter_rel.png">
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <span class="radiation">Radiation</span> 
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/rad_rel.png">
+                    </div>                      
+                    <div class="col-xs-4 text-center">
+                      <span class="dark-energy">Dark Energy</span> 
+                      <span class="superscript">*</span>
+                      <div class="eng-rel-space"></div>
+                      <img class="" src="img/darkeng_rel.png">
+                    </div>
+                  </div>
+                  <p class="darkeng-subtext"> 
+                    <span class="superscript">*</span>This represents only the most commonly considered form of dark energy. Technically anything within <img src="img/darkeng_range.png" alt="-1 < w < -1/3" title="-1 < w < -1/3"> is considered dark energy.
+                  </p>
+                </div>
+
+                <div class="page-controls text-center"> 
+                  <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                  <span> <span class="current-page"> 1 </span> / <span class="page-count"> 5 </span> </span>
+                  <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+                </div> 
+      </div>
+
+
+
+      <div class="row text-center presets-container">
+        <div class="presets">
+          <div class="help-tip helptip-up">
+            <div class="helptip-main helptip-paginated">
+              <div class="helptip-content preset-description">
+                <p>
+                This panel offers distinct pre-set scenarios for you to chose, all of which represent an interesting case for the universe's evolution. 
+                <br>
+                <br>
+                Click a button to set your universe to that scenario and check out the energy contents.  
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind benchmark-description">
+                <p>
+                Of particular note here is the Benchmark scenario. This represents the best estimate we have for how our real universe has evolved and will continue to evolve. Here, the amount of radiation, matter, and dark energy have all been measured experimentally. Note that they sum to 1, meaning our universe is flat! 
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind crunch-description">
+                <p>
+                A 'Crunch' universe starts out with a big-bang as in the benchmark scenario. Here though, the universe will reach a maximum size before the force of gravity causes it to contract back into a single poing in a big-crunch. This is a plausible scenario for our universe.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind bounce-description">
+                <p>
+                It is possible for the universe to start without a big-bang. In a so called 'Bounce' universe, space begins as large and contracts under the force of gravity. At some point, the dark energy takes over and the universe begins to expand once again.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind loitering-description">
+                <p>
+                The 'Loitering' universe is of note as it is the boundary between a bounce scenario and one that begins with a big-bang. Here the amount of energy is delicately balanced to allow the universe to stay the same size for a considerable amount of time. Here <img src="img/omega_l_helptip.png" alt="dark energy" title="Dark Energy"> is set to 1.7134. This precision is necessary to make the universe loiter. 
+                </p>
+              </div>
+
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 5 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+            </div>
+          </div>
+          <button class="btn btn-default benchmark" id="benchmarkButton" type="button"> Benchmark </button>
+          <button class="btn btn-default crunch" id="crunchButton" type="button">Crunch</button>
+          <button class="btn btn-default bounce" id="bounceButton" type="button">Bounce</button>
+          <button class="btn btn-default loitering" id="loiteringButton" type="button">Loitering
+
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <footer class="footer navbar-fixed-bottom">
+      <div class="btn-group dropup lang-group">
+        <button type="button" class="btn btn-xs btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="active-language">English</span> <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu additional-languages">
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+    <!-- jQuery -->
+    <script src="../../script/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="scripts/loadtext.js"></script>
+    <script type="text/javascript" src="vendor/vis-graph3d.min.js"></script>
+    <script type="text/javascript" src="vendor/d3.v3.min.js"></script>
+    <script type="text/javascript" src="vendor/nv.d3.min.js"></script>
+    <script type="text/javascript" src="scripts/evolution.js"></script>
+</html>

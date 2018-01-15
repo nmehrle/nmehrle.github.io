@@ -1,0 +1,65 @@
+{
+  "languages": {
+      "default": {
+        "en": "English"
+      },
+      "additional": {
+        "fr": "Français",
+        "es": "Español"
+      }
+  },
+  "en": {
+      "title": "Evolution of the Universe",
+      "description-main": "This page is designed to illustrate the relationship between the energy content and evolution of the universe, and explain the concept of the <a href='https://en.wikipedia.org/wiki/Ultimate_fate_of_the_Universe'>Ultimate Fate of the Universe</a>.",
+      "description-bullets": [
+        "Adjust the sliders below and observe how they affect the universe's evolution as shown in the line graph.",
+        "Watch the universe evolve in the animation panel.",
+        "Use the button panel to jump to certain pre-set scenarios. The Benchmark scenario is the best estimate for our universe!",
+        "Hover over the <div class='mock-help-tip'></div> symbols to learn more about a specific topic.",
+        "This assumes that you're familiar with the energy density concept described <a href='curvature.html'>here</a>, in the tooltip next to the slider."
+      ],
+      "main-helptip-chart": [
+        "This panel depicts a graph of the size of the universe versus time. Change the selected series by using the sliders below, and click Add to add a new series. <br><br> Click the 'Animate' button to switch to an animation of how this  universe evolves.",
+        "The size of the universe is described by a unitless value called the <a href='https://en.wikipedia.org/wiki/Scale_factor_(cosmology)'>Scale Factor</a>. This is used because the absolute size of the universe is unknown! A scale factor of 1 corresponds to the current size of the universe. For reference, the current <a href='https://en.wikipedia.org/wiki/Observable_universe'>Observable Universe</a> is roughly 93 billion light-years (5.5 x 10<sup>23</sup> miles) in diameter.",
+        "The evolution of the universe is entirely determined by the amount and type of stuff (energy) it contains at present. It can be described by the <a href='https://en.wikipedia.org/wiki/Friedmann_equations'>Friedmann Equations</a>. <div style='height: 30px;'></div>"
+      ],
+      "main-helptip-dual": [
+        "These panels are meant to visualize how the universe will evolve under the conditions described by the sliders below. <div class='row helptip-division'><div class='col-xs-6'> The panel on the left depicts a graph of the size of the universe versus time. Change the selected series by using the sliders below, and click Add to add a new series.</div><div class='col-xs-6'> The panel on the right depicts an animation of the universe evolving, with a few galaxies added for illustration. Note, the galaxies are not depicted to scale with the entire universe.</div></div>",
+        "<div class='row helptip-division'><div class='col-xs-6'> The size of the universe is described by a unitless value called the <a href='https://en.wikipedia.org/wiki/Scale_factor_(cosmology)''>Scale Factor</a>. This is used because the absolute size of the universe is unknown! A scale factor of 1 corresponds to the current size of the universe. For reference, the current <a href='https://en.wikipedia.org/wiki/Observable_universe'>Observable Universe</a> is roughly 93 billion light-years (5.5 x 10<sup>23</sup> miles) in diameter.</div><div class='col-xs-6'> The galaxies shown in the universe should stay the same size for the entire evolution of the universe. Although space may be expanding, the self-gravity of these galaxies keeps them at the same size, while the distance between them increases. The size change shown here is a result of the blown up scale used for visualization.</div></div>",
+        "The evolution of the universe is entirely determined by the amount and type of stuff (energy) it contains at present. It can be described by the <a href='https://en.wikipedia.org/wiki/Friedmann_equations'>Friedmann Equations</a>.<div style='height: 90px;'></div>"
+      ],
+      "main-helptip-animation": [
+        "This panel depicts an animation of the universe evolving, with a few galaxies added for illustration. Note, the galaxies are not depicted to scale with the entire universe.<br><br> Click the 'View Chart' button to return to a graph of the size of the universe versus time.",
+        "The galaxies shown in the universe should stay the same size for the entire evolution of the universe. Although space may be expanding, the self-gravity of these galaxies keeps them at the same size, while the distance between them increases. The size change depicted is a result of the incorrect scale used for visualization."
+      ],
+      "slider-helptip": [
+        "This panel allows you to manipulate the amounts three distinct types of stuff (energy) in your toy universe. Play with the sliders and observe how the universe's evolution changes. <br><br> Remember, each type of energy is described in units of the critical energy density, and the sum of all forms of energy dictates the curvature of the universe (as described <a href='curvature.html'>here</a>)."
+      ],
+      "radiation-description": "Radiation describes all the energy in the universe in the form of light (photons). Most of this energy is in the <a href='https://en.wikipedia.org/wiki/Cosmic_microwave_background'>Cosmic Microwave Background</a>, an all present low energy field of microwave energy. It won't cook your food, but you can see it on the static on an old TV.",
+      "matter-description": "Matter is all the energy in the universe that has mass. This consists of two parts: first, all the stuff you usually consider matter, most of which is <a href='https://en.wikipedia.org/wiki/Baryon#Baryonic_matter'>Baryonic Matter</a>, and second, a mysterious form which doesn't interact with light, called <a href='https://en.wikipedia.org/wiki/Dark_matter'>Dark Matter</a>. Most matter in our universe is dark.",
+      "darkeng-description": "<a href='https://en.wikipedia.org/wiki/Dark_energy'>Dark Energy</a> is a hypothesized form of energy about which almost nothing is known except that it causes the universe to expand at an accelerating rate. We only know of it through its effect on the expansion rate of the universe, which we have measured.",
+      "energy-description": "Different forms of energy are described mathematically by their <a href='https://en.wikipedia.org/wiki/Equation_of_state_(cosmology)''>Equation of State</a>, and in particular, the equation of state parameter, <img src='img/little_omega.png' alt='w' title='w'>. The value of <img src='img/little_omega.png' alt='w' title='w'> dictates the effect a particular kind of energy has on the evolution of the universe, and when in the universe's history that kind of energy dominates the evolution. For each kind of energy, the equation of state paramter, <img src='img/little_omega.png' alt='w' title='w'>, and relation between scale factor (<img src='img/math_a.png' alt='a' title='a'>), and time (<img class='inline-img' src='img/math_t.png' alt='t' title='t'>) when that energy dominates in a flat universe are:",
+      "darkeng-subtext": "<span class='superscript'>*</span>This represents only the most commonly considered form of dark energy. Technically anything within <img src='img/darkeng_range.png' alt='-1 < w < -1/3' title='-1 < w < -1/3'> is considered dark energy.",
+      "preset-description": "This panel offers distinct pre-set scenarios for you to chose, all of which represent an interesting case for the universe's evolution.<br><br> Click a button to set your universe to that scenario and check out the energy contents.",
+      "benchmark-description": "Of particular note here is the Benchmark scenario. This represents the best estimate we have for how our real universe has evolved and will continue to evolve. Here, the amount of radiation, matter, and dark energy have all been measured experimentally. Note that they sum to 1, meaning our universe is flat! ",
+      "crunch-description": "A 'Crunch' universe starts out with a big-bang as in the benchmark scenario. Here though, the universe will reach a maximum size before the force of gravity causes it to contract back into a single poing in a big-crunch. This is a plausible scenario for our universe.",
+      "bounce-description": "It is possible for the universe to start without a big-bang. In a so called 'Bounce' universe, space begins as large and contracts under the force of gravity. At some point, the dark energy takes over and the universe begins to expand once again.",
+      "loitering-description": "The 'Loitering' universe is of note as it is the boundary between a bounce scenario and one that begins with a big-bang. Here the amount of energy is delicately balanced to allow the universe to stay the same size for a considerable amount of time. Here <img src='img/omega_l_helptip.png' alt='dark energy' title='Dark Energy'> is set to 1.7134. This precision is necessary to make the universe loiter.",
+      "animate":    "Animate",
+      "add":        "Add",
+      "view-chart": "View Chart",
+      "radiation":  "Radiation",
+      "matter":     "Matter",
+      "dark-energy":"Dark Energy",
+      "benchmark": "Benchmark",
+      "bounce": "Bounce",
+      "crunch": "Crunch",
+      "loitering": "Loitering"
+  },
+  "fr": {
+      "title": "Prochainement en français"
+  },
+  "es": {
+      "title": "Próximamente en español"
+  }
+}
