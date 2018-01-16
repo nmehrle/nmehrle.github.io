@@ -91,11 +91,17 @@ function initialize() {
   headerValues['.header']['width']['start'] = $(window).width()+3;
   headerTransition();
   $(window).scroll();
-}
-;
+};
+
 window.onresize = function(event) {
   initialize();
-}
+};
+
+$('<img/>').attr('src', 'img/space_bg_md.jpeg').on('load', function() {
+   $(this).remove();
+   $('.header').addClass('header-img-bg');
+});
+
 
 function headerTransition() {
   var $w = $(window);

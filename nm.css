@@ -106,17 +106,27 @@ body {
     font-size: 48px;
     z-index: 1;
 
-    /*background-color: var(--accent-color);*/
-    background-image: url("img/space_bg_me.jpeg");
-    /*background-image: url("img/space_bg.jpeg");*/
+    background-color: var(--accent-color);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
+  .header-img-bg {
+    background-image: url("img/space_bg_md.jpeg");
+  }
+
+  .hdr-bg-load {
+    display: none;
+  }
+
   .hdr-cont {
     margin: 0 auto;
     color: var(--header-text-color);
+  }
+
+  .hdr-img-cont {
+    /*padding-bottom: 100%;*/
   }
 
   .hdr-img {
