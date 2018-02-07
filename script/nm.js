@@ -74,16 +74,10 @@ $('#scroll-down-btn').click(function() {
   let dest = $('.main').position().top;
   $('html,body').animate({scrollTop: dest}, {duration: 600});
 });
-$('#about-btn').click(function() {
-  let dest = $('#about-bar').position().top + $('.main').position().top;
-  $('html,body').animate({scrollTop: dest}, {duration: 600});
-});
-$('#research-btn').click(function() {
-  let dest = $('#research-bar').position().top + $('.main').position().top;
-  $('html,body').animate({scrollTop: dest}, {duration: 600});
-});
-$('#project-btn').click(function() {
-  let dest = $('#project-bar').position().top + $('.main').position().top;
+
+$('.hdr-btn').click(function() {
+  let which = $(this).children()[0].id;
+  let dest = $('#'+which+'-bar').position().top + $('.main').position().top;
   $('html,body').animate({scrollTop: dest}, {duration: 600});
 });
 

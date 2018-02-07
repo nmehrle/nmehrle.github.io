@@ -287,6 +287,9 @@ body {
       text-align: center;
       margin-top: 20px;
     }
+    .infobar-btn-cont > a {
+      margin-bottom: 10px;
+    }
 
     .infobar-sep {
       height: 4px;
@@ -311,7 +314,7 @@ body {
     }
 
     .footer-btn{
-      height: 40px;
+      min-height: 40px;
       border: 3px solid #111;
 
       display: inline-block;
@@ -321,6 +324,7 @@ body {
 
     .footer-btn .btn-inner {
       width: auto;
+      min-height: 34px; /*40 px - 3px border*/
       min-width: 100px;
       position: relative;
 
