@@ -106,24 +106,51 @@ body {
     font-size: 48px;
     z-index: 1;
 
+    
+    
+  }
+
+  /*Both Background Divs*/
+  .hdr-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Farthest Back*/
+  .hdr-bg-bg {
+    z-index: 0;
     background-color: var(--accent-color);
+  }
+
+  /*Fore-background*/
+  .hdr-bg-fg {
+    z-index: 1;
+
+    background-image: url("img/space_bg_icon.jpeg");
+    filter: blur(50px);
+    transform: scale(1);
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .header-img-bg {
+  .hdr-bg-full-img {
     background-image: url("img/space_bg_md.jpeg");
+    filter: blur(0);
   }
 
-  .hdr-bg-load {
-    display: none;
-  }
-
+  /*content*/
   .hdr-cont {
+    position: relative;
     margin: 0 auto;
+    height: 100%;
     color: var(--header-text-color);
+    z-index: 2;
   }
+
+ 
 
   .hdr-img-cont {
     /*padding-bottom: 100%;*/

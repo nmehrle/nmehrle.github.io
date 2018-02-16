@@ -93,7 +93,7 @@ window.onresize = function(event) {
 
 $('<img/>').attr('src', 'img/space_bg_md.jpeg').on('load', function() {
    $(this).remove();
-   $('.header').addClass('header-img-bg');
+   $('.hdr-bg-fg').addClass('hdr-bg-full-img');
 });
 
 
