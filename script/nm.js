@@ -92,8 +92,9 @@ window.onresize = function(event) {
 };
 
 $('<img/>').attr('src', 'img/space_bg_md.jpeg').on('load', function() {
-   $(this).remove();
-   $('.hdr-bg-fg').addClass('hdr-bg-full-img');
+  $(this).remove();
+  $('.hdr-bg-fg').addClass('hdr-bg-full-img');
+  $('.hdr-bg-fg img').remove();
 });
 
 
