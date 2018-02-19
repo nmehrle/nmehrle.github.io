@@ -125,15 +125,10 @@ body {
 
   /*Fore-background*/
   .hdr-bg-fg {
-    /*z-index: 1;
-
-    /*background-image: url("img/space_bg_icon.jpeg");*/
-    /*filter: blur(50px);
-    transform: scale(1);
-
+    z-index: 1;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;*/*/
+    background-position: center;
   }
 
   .hdr-bg-fg img {
