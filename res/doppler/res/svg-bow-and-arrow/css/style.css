@@ -1,0 +1,30 @@
+body {
+  background-color:#ECE7BD;
+  overflow: hidden;
+  text-align:center;
+  display:inline-block;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  width:100%;
+  height:100%;
+    overflow:hidden;
+   display:inline-block;
+}
+
+svg{
+  
+  height:100%;
+ 
+  visibility:hidden;
+  
+}
+

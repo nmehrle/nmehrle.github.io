@@ -1,0 +1,443 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	background-color: #FFF8E7;
+	color: #222;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:focus, button:active {
+	outline: none;
+}
+
+/* UTILITY */
+ .float-left {
+ 	float: left;
+ }
+
+ .float-right {
+ 	float: right;
+ }
+
+ .hidden {
+ 	display: none !important;
+ }
+
+ .svg-container {
+ 	background-color: #222;
+
+	height: 100%;
+	width: 100%;
+
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size:	100%;
+
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size:	100%;
+ }
+
+ .white-bg {
+ 	background-color: white;
+ }
+/************/
+
+
+
+.container {
+	padding: 0 15px;
+}
+
+.title-row {
+	text-align: center;
+}
+
+.title-cont{
+  display: inline-block;
+  position: relative;
+}
+
+.title-help-tip {
+  top: 27px;
+  right: -35px;
+}
+
+.title-help-tip .helptip-main {
+  width: 500px;
+  /*min-height: 150px;*/
+}
+
+.title {
+	font-size: 36px;
+
+	margin-top: 20px;
+	margin-bottom: 10px;
+
+	font-weight: 500;
+	line-height: 1.1;
+}
+
+/* Controls */
+	.controls-row {
+		position: relative;
+		text-align: center;
+
+		border-radius: 10px;
+		border: 3px solid #222;
+
+		margin: 0 15px;
+		padding: 10px;
+	}
+
+	.controls-row > div {
+		display: inline-block;
+	}
+
+	.main-controls-container {
+		margin-top: 5px;
+	}
+
+
+	/* Button Controls */
+		.control-btn {
+			background-color: transparent;
+
+			height: 40px;
+			width: 40px;
+			padding: 5px;
+
+			border: 3px solid #222;
+			border-radius: 5px;
+		}
+
+		.stop-btn {
+			margin: 5px;
+		}
+
+		.stop {
+			mask-image: url(img/stop.svg);
+			-webkit-mask-image: url(img/stop.svg);
+		}
+
+		.play {
+			mask-image: url(img/play.svg);
+			-webkit-mask-image: url(img/play.svg);
+		}
+
+		.pause { 
+			mask-image: url(img/pause.svg);
+			-webkit-mask-image: url(img/pause.svg);
+
+			height: 20px;
+		}
+
+		.refresh { 
+			mask-image: url(img/refresh.svg);
+			-webkit-mask-image: url(img/refresh.svg);
+		}
+	/**/
+
+	/* Range Controls */
+		.range-control-container {
+			width: 210px;
+			position: relative;
+			text-align: center;
+		}
+
+		.range-control-container > * {
+			display: inline-block;
+		}
+
+		.range-control-inner {
+			width: 160px;
+		}
+
+		.range-control-inner > label {
+			display: inline-block;
+			font-weight: 700;
+			margin-bottom: 8px;
+		}
+
+		.range-control-inner > input {
+			margin: 0;
+			width: 100%;
+			padding-bottom: 20px;
+
+			background: -webkit-repeating-linear-gradient(0deg,
+			      #333, #333 3px, 
+			      transparent 0, transparent 14%
+			    ) 50% 40%,
+			    transparent;
+			background-size: 89% 12px;
+			background-repeat: no-repeat;
+		}
+	/*
+/**/
+
+
+/*Main Container*/
+	.animation-row {
+		margin: 10px 15px;
+	}
+
+	.main-container {
+		position: relative;
+
+		height: 276px;
+		width: 100%;
+
+		border-radius: 10px;
+		border: 3px solid #222;
+	}
+
+	.main-container > div {
+		height: 100%;
+		width: 100%;
+		padding: 10px;
+	}
+
+	.animation-container {
+		text-align: center;
+	}
+
+	.animation-canvas {
+		display: block;
+		/*background-color: black;*/
+	}
+	.animation-asset {
+		display: none;
+	}
+
+	#settings-btn {
+		position: absolute;
+		right: 2px;
+		top: 2px;
+
+		width: 25px;
+		height: 25px;
+
+		padding: 0;
+		background:	none;
+		border: none;
+	}
+
+	#settings-btn > div {
+		mask-image: url(img/settings.svg);
+		-webkit-mask-image: url(img/settings.svg);
+	}
+
+	/* Settings */
+		.settings-container{
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 10px;
+			padding-right: 40px !important;
+
+			background-color: #FFF8E7;
+			display: flex;
+		}
+
+		.settings-container > div {
+			margin: 10px;
+			height: 90%;
+
+			display: inline-block;
+			text-align: center;
+		}
+
+		.settings-container h4 {
+			margin-top: 0;
+			text-decoration: underline;
+		}
+
+		.radio-container {
+			min-width: 140px;
+		}
+
+		.radio-container .radio-group {
+			text-align: left;
+		}
+
+		.parameter-adjustment-container {
+			width: 210px;
+			/*border-right: 2px solid #222;*/
+			border-left: 2px solid #222;
+		}
+
+		.credits-container {
+			width: 100%;
+		}
+
+		.credits-container ul{
+			list-style: none;
+			padding: 0;
+		}
+
+
+
+		.settings-container .range-control-inner label {
+			font-weight: 500;
+		}
+
+
+	/************/
+/**************/
+
+
+/* Data Displays */
+.data-display-row {
+  position: relative;
+	height: 300px;
+	display: flex;
+  margin: 0 20px;
+}
+
+.data-display-row > div{
+  height: 100%;
+  /*display: inline-block;*/
+}
+
+.data-display-help-tip {
+  height: 28px !important;
+  top: -5px;
+}
+
+.data-display-help-tip .helptip-main {
+  width: 500px;
+  /*min-height: 150px;*/
+}
+
+.sound-control-container {
+	width: 40px;
+	padding-left: 10px;
+	float: left;
+}
+
+.sound-btn {
+	margin-top: 20px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+
+	border: none;
+	background: none;
+}
+
+.sound-btn:first-child {
+	margin-top: 34px; 
+}
+
+.sound-off {
+	mask-image: url(img/volume_off.svg);
+	-webkit-mask-image: url(img/volume_off.svg);
+
+}
+.sound-on {
+	margin-top: -5%;
+
+	mask-image: url(img/volume_on.svg);
+	-webkit-mask-image: url(img/volume_on.svg);
+}
+
+.freq-graph-container {
+	margin: 0;
+	/*overflow: hidden;*/
+	width: 100%;
+  position: relative;
+}
+
+.freq-display-container {
+	float: right;
+	width: 150px;
+	/*margin-left: 10px;*/
+}
+
+.freq-display {
+	float: right;
+	margin-top: 0;
+
+	width: 100%;
+	border: 2px solid #222;
+	border-radius: 10px;
+	font-size: 2em;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.freq-display:first-child {
+	margin-top: 25px;
+}
+
+@media screen and (max-width: 849px) {
+	.freq-display {
+		font-size: 1.5em;
+		margin: 20px auto; 
+	}
+	.freq-display:first-child { 
+		margin-top: 30px;
+	}
+}
+/*******************/
+
+/* Freq Graph Properties */
+	.plottable .drag-box-layer .selection-area {
+		fill-opacity: 0.2;
+	}
+/*************************/
+
+/*Help-tip Helpers*/
+.help-tip .helptip-main {
+  font-size: 14px;
+}
+
+.help-tip .helptip-paginated {
+  padding-bottom: 5px;
+}
+
+.helptip-behind {
+  display: none;
+}
+
+.page-controls span {
+  line-height: 30px;
+  vertical-align: bottom;
+  padding: 0 1px 0 2px;
+}
+
+.current-page {
+  padding: 0 !important;
+}
+
+.page-count {
+  padding: 0 !important;
+}
+
+.page-control-btn {
+  font-size: 30px;
+  padding: 0px;
+  line-height: 30px;
+  background-color: #1E2021;
+  color: white;
+  outline: none;
+  text-decoration: none;
+}
+
+.page-control-btn:focus, .page-control-btn:active{
+    outline: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none;
+  }

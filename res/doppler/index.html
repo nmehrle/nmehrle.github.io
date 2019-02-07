@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--                Head Goes Below                  -->
+
+    <meta name="description" content="">
+    <meta name="author"      content="Nicholas Mehrle">
+    <meta name="keywords"    content="">
+
+    <title>Doppler Effect</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+
+    <!-- Custom Styling -->
+    <link rel="stylesheet" href="vendor/plottable.css">
+    <link rel="stylesheet" href="custom-slider.css">
+    <link rel="stylesheet" href="help-tip.css">
+    <link rel="stylesheet" href="doppler.css">
+
+    <!-- Shortcut Icon -->
+    <link rel="shortcut icon" href="img/galaxy.png">
+  </head>
+  <body>
+
+    <div class="contianer">
+      <div class="title-row">
+        <div class="title-cont">
+          <h1 class="title"> Doppler Effect </h1>
+
+          <div class="help-tip title-help-tip">
+            <div class="helptip-main helptip-paginated main-frame-helptip">
+              <div class="helptip-content">
+                <p>
+                This applet is designed to teach about the Doppler effect, the observed change in frequency of light or sound as the source moves, represented here by a bow and arrow, and target. Use the upper bar to control the animation, with the sliders on the left and right controlling the movement of the objects, and the buttons in the center starting or resetting the animation. 
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                As the bow (source) and target (sink) move at different speeds, notice how the the rate at which the bow fires is different from the rate at which the target is hit. This can be seen in the graph panel below the animation, with more helpful information down there. This difference in the frequencies seen at the source and sink is known as the doppler effect. The same effect is seen in light and sound as well.
+                </p>
+              </div>
+
+              <div class="helptip-content helptip-behind">
+                <p>
+                In sound, the doppler effect is seen as a change in pitch. As one object making sound is moving towards another which listens, the listener will hear a higher pitched sound. As the noisy object moves away, the listener hears a lower pitched sound. 
+
+                In light, the effect is also known as redshift, and is seen as a change in color. As something emitting light moves towards an observer, the light appears more blue. As the emitter moves away, the light appears more red. 
+                </p>
+              </div>
+
+              <div class="page-controls text-center"> 
+                <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+                <span> <span class="current-page"> 1 </span> / <span class="page-count"> 3 </span> </span>
+                <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+              </div> 
+            </div> 
+          </div>
+
+        </div>
+        <!-- <button id="step" class="">
+         step
+        </button>
+        <button id="add500t" class="">
+          t+=500
+        </button> -->
+      </div>
+
+      <div class="controls-row">
+
+        <div class="range-control-container float-left">
+          <div class="range-control-inner">
+            <label for="source-speed-control">
+              Bow Speed
+            </label>
+            <input type="range" id="source-speed-control" class="speed-control fancy-range">
+          </div>
+          <button id="source-stop-btn" class="control-btn stop-btn float-right">
+            <div class="svg-container stop">
+            </div>
+          </button>
+        </div>
+
+        <div class="main-controls-container">
+          <button id="play-pause-btn" class="control-btn">
+            <div class="svg-container play">
+            </div>
+          </button>
+          <button id="refresh-btn" class="control-btn">
+            <div class="svg-container refresh">
+            </div>
+          </button>
+        </div>
+
+        <div class="range-control-container float-right">
+          <button id="sink-stop-btn" class="control-btn stop-btn float-left">
+            <div class="svg-container stop">
+            </div>
+          </button>
+          <div class="range-control-inner">
+            <label for="sink-speed-control">
+              Target Speed
+            </label>
+            <input type="range" id="sink-speed-control" class="speed-control fancy-range">
+          </div>
+        </div>
+      </div>
+
+      <div class="row animation-row">
+        <div class="main-container">
+
+          <div class="animation-container">
+            <img id="target" class="sink animation-asset" src="img/target_2.png">
+            <img id="bow" class="source animation-asset" src="img/bow.png">
+            <img id="arrow" class="projectile animation-asset" src="img/arrow.png">
+            <img id="bow-sprite" class="sprite-sheet animation-asset" src="img/bow_spritesheet.png">
+
+
+            <canvas id="main-canvas" class="animation-canvas"></canvas>
+            <canvas id="ruler-canvas" class="animation-canvas"></canvas>
+          </div>
+
+          <div class="settings-container hidden">
+
+            <div class="credits-container">
+              <h4>Image Credits</h4>
+              <ul>
+                <li> Bow and Arrow by Chris Gannon</li>
+
+              </ul>
+            </div>
+
+            <div class="parameter-adjustment-container">
+              <h4>
+                Parameter Adjustments
+              </h4>
+
+              <div class="range-control-container">
+                <div class="range-control-inner">
+                  <label for="projectile-speed-control">
+                    Projectile Speed
+                  </label>
+                  <input type="range" id="projectile-speed-control" class="settings-control fancy-range" step="1" min="1" max="15" value="5">
+                </div>
+              </div>
+
+              <div class="range-control-container">
+                <div class="range-control-inner">
+                  <label for="fire-frequency-control">
+                    Firing Rate
+                  </label>
+                  <input type="range" id="fire-frequency-control" class="settings-control fancy-range" step="0.5" min="0.5" max="2" value="1">
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="radio-container">
+              <h4>
+                Change Scenario
+              </h4>
+
+              <div class="radio-group">
+                <input type="radio" name="scenario" value="0" checked="checked">
+                  Bow and Arrow 
+                <br>
+                <input type="radio" name="scenario" value="1"> 
+                  Ambulance 
+                <br>
+                <input type="radio" name="scenario" value="2"> 
+                  Galaxy
+              </div>
+            </div> -->
+
+
+
+          </div>
+
+          <button id="settings-btn">
+            <div class="svg-container"></div>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="row data-display-row">
+        <div class="help-tip data-display-help-tip">
+          <div class="helptip-main helptip-paginated main-frame-helptip">
+            <div class="helptip-content">
+              <p>
+              The information shown here is meant to help illustrate the doppler effect. The graph on the top shows circles when the bow fires and arrow, and crosses when the target is hit by an arrow. The graph on the bottom is a zoomed out version of the top graph. The displays below show the frequency of both the bow firing arrows, and the target being hit.
+              </p>
+            </div>
+
+            <div class="helptip-content helptip-behind">
+              <p>
+              Play with the movement sliders at the top and observe how the frequency of the target being hit changes.Can you make the crosses appear very close together? Can you space them out as much as you can? Is there a delay between changing the movement and seeing an effect? Why would that be?
+              </p>
+            </div>
+
+            <div class="page-controls text-center"> 
+              <a class="page-control-btn btn page-left" type="button"> &lsaquo;</a> 
+              <span> <span class="current-page"> 1 </span> / <span class="page-count"> 2 </span> </span>
+              <a class="page-control-btn btn page-right" type="button"> &rsaquo;</a> 
+            </div> 
+          </div> 
+        </div>
+        <!-- <div class="sound-control-container">
+          <button id="fired-sound-btn" class="sound-btn">
+            <div class="svg-container sound-off"></div>
+          </button>
+
+          <button id="hit-sound-btn" class="sound-btn">
+            <div class="svg-container sound-off"></div>
+          </button>
+        </div> -->
+
+        <div class="freq-graph-container">
+          <svg id="freq-graph"></svg>
+        </div>
+
+        <div class="freq-display-container">
+          <p class="freq-display">
+            <span id="fired-freq"> 0.00 </span> / sec
+          </p>
+
+          <p class="freq-display">
+            <span id="hit-freq"> 0.00</span> / sec
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="vendor/bootstrap.min.js"></script>
+
+    <!-- <script src="vendor/howler.core.min.js"></script> -->
+    <script src="vendor/pizzicato.min.js"></script>
+
+    <!-- plottable needs d3.v3 -->
+    <script src="vendor/d3.v3.min.js"></script>
+    <script src="vendor/plottable.min.js"></script>
+
+    <!-- Chroma JS for Colors -->
+    <script src="vendor/chroma.min.js"></script>
+
+    <script src="animated.js"></script>
+    <script src="doppler.js"></script>
+  </body>
+</html>
