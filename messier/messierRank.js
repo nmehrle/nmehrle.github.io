@@ -1,4 +1,6 @@
 var currentObjects = [0,0]
+var database = firebase.database()
+
 
 $(document).ready(function(){
   chooseObjects();
@@ -27,12 +29,12 @@ function chooseObjects() {
 }
 
 $(".obj_1").click(function() {
-  logClick(currentObjects[0]);
+  logClick(currentObjects[0], currentObjects[1]);
   chooseObjects()
 })
 
 $(".obj_2").click(function() {
-logClick(currentObjects[1]);
+logClick(currentObjects[1], currentObjects[0]);
 chooseObjects()
 })
 
@@ -48,8 +50,27 @@ function createArray(length) {
     return arr;
 }
 
-function logClick(ind) {
-  console.log(ind);
+function logClick(winner, loser) {
+  var ret;
+
+  var currentScore;
+  var newScore;
+
+  database.ref(''+winner).once('value', function(snapshot) {
+    if (snapshot.val() === null) {
+      database.ref(''+winner).set({init: 0});
+      newScore=1;
+    }
+    else {
+      currentScore = snapshot.val()[loser];
+      if (currentScore === undefined) {
+        currentScore = 0;
+      }
+
+      newScore = currentScore+1;
+    }
+    database.ref(''+winner+'/'+loser).set(newScore)
+  });
 }
 
 function getRandomInt(min, max) {
