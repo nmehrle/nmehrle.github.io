@@ -59,7 +59,7 @@ body {
 .messier_image_cont:before {
   content: "";
   display: block;
-  padding-top: 75%;
+  padding-top: 100%;
 }
 
 .messier_label {
@@ -121,22 +121,23 @@ body {
   }
   .rank-box {
     height: 90%;
+
   }
 
   .separator {
     height: 5%
-    font-size: 20px;
   }
 
   .separator-text{
     line-height: 150%;
+    font-size: 24px;
   }
 
   .messier_container {
-    height: 45%;
-    width: 90%;
+    /*height: 45%;*/
+    width: 75%;
 
-    margin: 5%;
+    margin: 5% auto;
   }
 
   .obj_1 {
@@ -159,3 +160,47 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) and (max-height: 800px) {
+  .title h1 {
+    font-size: 25px;
+    height: 10%;
+    margin: 0;
+  }
+  .rank-box {
+    height: 90%;
+
+  }
+
+  .separator {
+    height: 5%
+  }
+
+  .separator-text{
+    line-height: 130%;
+    font-size: 20px;
+  }
+
+  .messier_container {
+    width: 70%;
+    margin: 5% auto;
+  }
+
+  .obj_1 {
+    margin-top: 4%;
+    margin-bottom: 0;
+  }
+
+  .obj_2 {
+    margin-top: 0;
+  }
+
+  .messier_image_cont{
+    width: 100%;
+    max-width: 450px;
+    margin: 0% auto;
+  }
+
+  .messier_label {
+    font-size: 24px;
+  }
+} 
